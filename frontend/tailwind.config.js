@@ -9,6 +9,13 @@ export default {
       fontFamily: {
         raleway: ['Raleway', 'sans-serif'],
       },
+      colors: {
+        puzzleBlue: {
+          light: '#9BDEDE',
+          DEFAULT: '#72B3B3',
+          dark: '#477A7A',
+        },
+      },
     },
   },
   plugins: [],

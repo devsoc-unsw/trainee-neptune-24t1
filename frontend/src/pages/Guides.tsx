@@ -14,11 +14,11 @@ function Guides () {
   return (
     <>
       <NavigationBar/>
-      <div className="m-10">
-        <button className="rounded-l-lg py-2 px-4 transition duration-300 bg-slate-100 hover:bg-blue-100" onClick={e => switchGuide(e, 'rebus')}>REBUS</button>
-        <button className="border-x py-2 px-4 transition duration-300 bg-slate-100 hover:bg-blue-100" onClick={e => switchGuide(e, 'logic')}>LOGIC</button>
-        <button className="border-r py-2 px-4 transition duration-300 bg-slate-100 hover:bg-amber-100" onClick={e => switchGuide(e, 'cryptic')}>CRYPTIC</button>
-        <button className="rounded-r-lg py-2 px-4 transition duration-300 bg-slate-100 hover:bg-pink-100" onClick={e => switchGuide(e, 'minipuzz')}>MINIPUZZ</button>
+      <div className="mt-10">
+        <button className="rounded-l-lg py-2 px-4 transition duration-300 bg-slate-100 hover:bg-blue-100" onClick={e => switchGuide(e, 'rebus')}>Rebus</button>
+        <button className="border-x py-2 px-4 transition duration-300 bg-slate-100 hover:bg-blue-100" onClick={e => switchGuide(e, 'logic')}>Logic</button>
+        <button className="border-r py-2 px-4 transition duration-300 bg-slate-100 hover:bg-amber-100" onClick={e => switchGuide(e, 'cryptic')}>Cryptic</button>
+        <button className="rounded-r-lg py-2 px-4 transition duration-300 bg-slate-100 hover:bg-pink-100" onClick={e => switchGuide(e, 'minipuzz')}>Minipuzz</button>
       </div>
       {puzzleType === 'rebus' && <Rebus/>}
       {puzzleType === 'logic' && <Logic/>}
@@ -31,25 +31,25 @@ function Guides () {
 
 function Rebus () {
   return (
-    <SectionHeader heading="Rebus"/>
+    <SectionHeader heading="REBUS"/>
   );
 }
 
 function Logic () {
   return (
-    <SectionHeader heading="Logic"/>
+    <SectionHeader heading="LOGIC"/>
   );
 }
 
 function Cryptic () {
   return (
-    <SectionHeader heading="Cryptic"/>
+    <SectionHeader heading="CRYPTIC"/>
   );
 }
 
 function Minipuzz () {
   return (
-    <SectionHeader heading="Minipuzz"/>
+    <SectionHeader heading="MINIPUZZ"/>
   );
 }
 
