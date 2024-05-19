@@ -1,6 +1,6 @@
 // import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faDiscord, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faDiscord, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 function Footer () {
   return (
@@ -16,7 +16,7 @@ function Footer () {
                 <FontAwesomeIcon icon={faInstagram} size="lg" />
               </a>
               <a href="https://www.facebook.com/UNSWPuzzleSoc" className="text-blue-600 hover:text-blue-900 transition duration-300">
-                <FontAwesomeIcon icon={faFacebookF} size="lg" />
+                <FontAwesomeIcon icon={faFacebook} size="lg" />
               </a>
             </div>
         </div>
