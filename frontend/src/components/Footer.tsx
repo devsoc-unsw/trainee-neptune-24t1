@@ -1,6 +1,7 @@
 // import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faDiscord, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 function Footer () {
   return (
@@ -19,6 +20,9 @@ function Footer () {
             </a>
             <a href="https://www.youtube.com/@unswpuzzlesoc/" className="text-red-600 hover:text-red-900 transition duration-300">
               <FontAwesomeIcon icon={faYoutube} size="lg" />
+            </a>
+            <a href="mailto:unswpuzzlesoc@gmail.com" className="text-slate-600 hover:text-slate-900 transition duration-300">
+              <FontAwesomeIcon icon={faEnvelope} size="lg" />
             </a>
           </div>
       </div>
