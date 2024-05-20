@@ -1,30 +1,35 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 
 import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
-import YearDropdown from '../components/Dropdowns';
+import YearDropdown from '../components/YearDropdown';
 
 function Archive () {
-  const [selectedYear, setYear] = React.useState('2024');
-  const [showDropdown, setDropdown] = React.useState(false);
-  const years = [2022, 2023, 2024];
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  // Include all years since 2022 automatically
+  const startYear = 2022;
+  const currentYear = new Date().getFullYear();
+  const years = Array.from({ length: currentYear - startYear + 1 }, (_, i) => startYear + i);
+
+  const [year, setYear] = React.useState(String(currentYear));
+  const [dropdown, setDropdown] = React.useState(false);
+
+  const dropdownRef = React.useRef<HTMLDivElement>(null);
 
   const toggleDropdown = () => {
-    setDropdown(!showDropdown);
+    setDropdown(!dropdown);
   }
 
   const handleClickOutside = (event: MouseEvent) => {
-    if (dropdownRef.current && dropdownRef.current.contains(event.target as Node) ) {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node) ) {
       setDropdown(false);
     }
   }
 
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-    return () =>{
-      document.removeEventListener('mousedown', handleClickOutside);
+  React.useEffect(() => {
+    window.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      window.removeEventListener('mousedown', handleClickOutside);
     }
   });
 
@@ -32,16 +37,12 @@ function Archive () {
     <>
       <NavigationBar/>
       <SectionHeader heading="ARCHIVE"/>
-      <div className="flex relative">
-        <h1 className="text-2xl max-w-max font-raleway mt-20 rounded pl-8 pr-3">Year: </h1>
-        <div className="flex-col">
-          <YearDropdown years={years} toggleDropdown={toggleDropdown} selectedYear={selectedYear} setYear={setYear} setDropdown={setDropdown} showDropdown={showDropdown} dropdownRef={dropdownRef}/>
-        </div>
+      <div className="flex justify-center">
+        <YearDropdown years={years} toggleDropdown={toggleDropdown} year={year} setYear={setYear} setDropdown={setDropdown} dropdown={dropdown} dropdownRef={dropdownRef}/>
       </div>
       <Footer/>
     </>
   );
 }
-
 
 export default Archive;
