@@ -29,7 +29,7 @@ const HuntFormat: React.FC<HuntDetails> = ({img, title, pdf, answer, solution}) 
         <p>Answer Checking Form:</p>
         {answerDisplayLink !== "Unavailable." ? (<a href={answer} className="text-blue-500 underline hover:text-blue-900">{answerDisplayLink}</a>) : <span><i>{answerDisplayLink}</i></span>}
         <p>Solutions:</p>
-        {solutionDisplayLink !== "Unavailable." ? (<a href={solution} className="text-blue-500 underline hover:text-blue-900">{solutionDisplayLink}</a>) : <span><i>{pdfDisplayLink}</i></span>}
+        {solutionDisplayLink !== "Unavailable." ? (<a href={solution} className="text-blue-500 underline hover:text-blue-900">{solutionDisplayLink}</a>) : <span><i>{solutionDisplayLink}</i></span>}
       </div>
     </div>
   );

@@ -7,6 +7,9 @@ import YearDropdown from '../components/YearDropdown';
 import HuntFormat from '../components/HuntFormat'
 import OWeekFormat from '../components/OWeekFormat'
 
+// 2019 Puzzle Hunts
+import Cosmos from '../assets/2019/Cosmos.jpg'
+
 // 2021 Puzzle Hunts
 import MagicShow from '../assets/2021/MagicShow.png'
 import EscapeMatrix from '../assets/2021/EscapeMatrix.png'
@@ -95,7 +98,7 @@ function Archive () {
 function Display2019 () {
   return (
     <div className="flex justify-center flex-wrap">
-
+      <HuntFormat img={Cosmos} title="Puzzles in the Cosmos" pdf="https://bit.ly/3kQJYaG" answer="" solution=""/>
   </div>
   );
 }
@@ -111,8 +114,8 @@ function Display2020 () {
 function Display2021 () {
   return (
     <div className="flex justify-center flex-wrap">
-      <OWeekFormat img={MagicShow} title="The Magic Show" form="http://bit.ly/escapemagic" solution=""/>
-      <HuntFormat img={EscapeMatrix} title="PuzzleSoc x MathSoc" pdf="http://bit.ly/3caNPvd" answer="" solution="https://bit.ly/3cNuxgY"/>
+      <OWeekFormat img={MagicShow} title="The Magic Show" form="https://bit.ly/escapemagic" solution=""/>
+      <HuntFormat img={EscapeMatrix} title="PuzzleSoc x MathSoc" pdf="https://bit.ly/3caNPvd" answer="" solution="https://bit.ly/3cNuxgY"/>
       <HuntFormat img={Pokehunt} title="Pokehunt" pdf="https://bit.ly/3gHn8T8" answer="" solution="https://bit.ly/3gHn8T8"/>
       <HuntFormat img={RiftII} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3wEeyt5" answer="" solution="https://bit.ly/344CGJ1"/>
       <HuntFormat img={AppStore} title="Puzzles in the App Store" pdf="https://bit.ly/2TyznIk" answer="" solution="https://bit.ly/3dHwLyH"/>
@@ -133,7 +136,7 @@ function Display2022 () {
       <OWeekFormat img={PurrfectParade} title="PuzzleSoc x GenSoc" form="https://forms.gle/kdQXXNkwLrgt5nTy8" solution="https://bit.ly/3c0jH9E"/>
       <HuntFormat img={RiftIII} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3OKjGEj" answer="https://bit.ly/potr3checker" solution="https://bit.ly/3zH9VCL"/>
       <HuntFormat img={GhibliHunt} title="PuzzleSoc x A&DSoc" pdf="https://bit.ly/3DArneF" answer="https://bit.ly/ghiblicheck" solution="https://bit.ly/3DDnwNA"/>
-      <HuntFormat img={TumblingTime} title="Tumbling Through Time" pdf="https://bit.ly/3FieDsd" answer="https://bit.ly/ttt-check" solution="http://bit.ly/3UMMXC4"/>
+      <HuntFormat img={TumblingTime} title="Tumbling Through Time" pdf="https://bit.ly/3FieDsd" answer="https://bit.ly/ttt-check" solution="https://bit.ly/3UMMXC4"/>
       <HuntFormat img={UntitledHunt} title="Untitled Puzzle Hunt" pdf="https://bit.ly/3Pzsq2p" answer="https://forms.gle/ia7XCa6iSSZQMBzU9" solution="https://bit.ly/3V7o9V4"/>
     </div>
   );
