@@ -9,10 +9,10 @@ const OWeekFormat: React.FC<OWeekDetails> = ({img, title, form, solution}) => {
   let formDisplayLink = form.slice(8);
   let solutionDisplayLink = solution.slice(8);
   if (form = "") {
-    form = "unavailable";
+    form = "Unavailable.";
   }
   if (solution = "") {
-    solution = "unavailable";
+    solution = "Unavailable.";
   }
   return (
     <div className="max-w-96 my-10 mx-5 bg-gray-100 px-3 py-5">
@@ -20,9 +20,9 @@ const OWeekFormat: React.FC<OWeekDetails> = ({img, title, form, solution}) => {
         <img src={img} className="aspect-video mb-3"></img>
         <h1 className="place-self-center font-raleway rounded my-3 text-2xl"><b> {title}</b></h1>
         <p>Google Forms:</p>
-        <a href={form} className="text-blue-500 underline hover:text-blue-900">{formDisplayLink}</a>
+        {formDisplayLink !== "Unavailable." ? (<a href={form} className="text-blue-500 underline hover:text-blue-900">{formDisplayLink}</a>) : <span>{formDisplayLink}</span>}
         <p>Solutions:</p>
-        <a href={solution} className="text-blue-500 underline hover:text-blue-900">{solutionDisplayLink}</a>
+        {solutionDisplayLink !== "Unavailable." ? (<a href={solution} className="text-blue-500 underline hover:text-blue-900">{solutionDisplayLink}</a>) : <span>{solutionDisplayLink}</span>}
       </div>
     </div>
   );
