@@ -115,12 +115,12 @@ function Display2019 () {
 function Display2020 () {
   return (
     <div className="flex justify-center flex-wrap">
-      <HuntFormat img={StockMarket} title="Puzzles in the Stock Market" pdf="http://bit.ly/2OshA2z" answer="" solution=""/>
+      <HuntFormat img={StockMarket} title="Puzzles in the Stock Market" pdf="https://bit.ly/2OshA2z" answer="" solution=""/>
       <HuntFormat img={Potterverse} title="Puzzles in the Potterverse" pdf="https://bit.ly/3oK1rCQ" answer="" solution=""/>
-      <HuntFormat img={CuriousVillage} title="Puzzles in the Curious Village" pdf="http://bit.ly/3edK5vF" answer="" solution=""/>
+      <HuntFormat img={CuriousVillage} title="Puzzles in the Curious Village" pdf="https://bit.ly/3edK5vF" answer="" solution=""/>
       <OWeekFormat img={SpiritWorld} title="The Spirit World" form="https://forms.gle/nkb5LSLy2DeCExrr8" solution=""/>
-      <HuntFormat img={AroundWorld} title="PuzzleSoc x PsychSoc" pdf="http://bit.ly/3bl2vJg" answer="" solution=""/>
-      <HuntFormat img={Rift} title="PuzzleSoc x RiotSoc" pdf="http://bit.ly/38jUToe" answer="" solution=""/>
+      <HuntFormat img={AroundWorld} title="PuzzleSoc x PsychSoc" pdf="https://bit.ly/3bl2vJg" answer="" solution=""/>
+      <HuntFormat img={Rift} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/38jUToe" answer="" solution=""/>
       <HuntFormat img={Matsuri} title="Puzzles at Matsuri" pdf="https://bit.ly/3bAD9Ym" answer="" solution=""/>
   </div>
   );
