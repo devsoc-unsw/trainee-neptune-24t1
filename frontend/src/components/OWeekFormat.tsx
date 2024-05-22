@@ -20,9 +20,9 @@ const OWeekFormat: React.FC<OWeekDetails> = ({img, title, form, solution}) => {
         <img src={img} className="aspect-video"></img>
         <h1 className="place-self-center font-raleway rounded my-5 text-2xl"><b> {title}</b></h1>
         <p>Google Forms:</p>
-        {formDisplayLink !== "Unavailable." ? (<a href={form} className="text-blue-500 underline hover:text-blue-900">{formDisplayLink}</a>) : <span>{formDisplayLink}</span>}
+        {formDisplayLink !== "Unavailable." ? (<a href={form} className="text-blue-500 underline hover:text-blue-900">{formDisplayLink}</a>) : <span><i>{formDisplayLink}</i></span>}
         <p>Solutions:</p>
-        {solutionDisplayLink !== "Unavailable." ? (<a href={solution} className="text-blue-500 underline hover:text-blue-900">{solutionDisplayLink}</a>) : <span>{solutionDisplayLink}</span>}
+        {solutionDisplayLink !== "Unavailable." ? (<a href={solution} className="text-blue-500 underline hover:text-blue-900">{solutionDisplayLink}</a>) : <span><i>{solutionDisplayLink}</i></span>}
       </div>
     </div>
   );

@@ -7,29 +7,40 @@ import YearDropdown from '../components/YearDropdown';
 import HuntFormat from '../components/HuntFormat'
 import OWeekFormat from '../components/OWeekFormat'
 
+// 2021 Puzzle Hunts
+import MagicShow from '../assets/2021/MagicShow.png'
+import EscapeMatrix from '../assets/2021/EscapeMatrix.png'
+import Pokehunt from '../assets/2021/Pokehunt.png'
+import RiftII from '../assets/2021/RiftII.jpg'
+import AppStore from '../assets/2021/AppStore.jpg'
+import PixarLamp from '../assets/2021/PixarLamp.jpg'
+import GalleryHeist from '../assets/2021/GalleryHeist.jpg'
+import TrickTreat from '../assets/2021/TrickTreat.jpg'
+import LifeCK from '../assets/2021/LifeCK.jpg'
+
 // 2022 Puzzle Hunts
-import WildWoods from '../assets/WildWoods.jpg'
-import CosmosII from '../assets/CosmosII.jpg'
-import OmensOccult from '../assets/OmensOccult.jpg'
-import PurrfectParade from '../assets/PurrfectParade.jpg'
-import RiftIII from '../assets/RiftIII.jpg'
-import GhibliHunt from '../assets/GhibliHunt.jpg'
-import TumblingTime from '../assets/TumblingTime.jpg'
-import UntitledHunt from '../assets/UntitledHunt.jpg'
+import WildWoods from '../assets/2022/WildWoods.jpg'
+import CosmosII from '../assets/2022/CosmosII.jpg'
+import OmensOccult from '../assets/2022/OmensOccult.jpg'
+import PurrfectParade from '../assets/2022/PurrfectParade.jpg'
+import RiftIII from '../assets/2022/RiftIII.jpg'
+import GhibliHunt from '../assets/2022/GhibliHunt.jpg'
+import TumblingTime from '../assets/2022/TumblingTime.jpg'
+import UntitledHunt from '../assets/2022/UntitledHunt.jpg'
 
 // 2023 Puzzle Hunts
-import AroundWorld from '../assets/AroundWorld.png'
-import CulinaryConundrums from '../assets/CulinaryConundrums.png'
-import CasinoHunt from '../assets/CasinoHunt.png'
-import RiftIV from '../assets/RiftIV.png'
-import ShojoWorld from '../assets/ShojoWorld.png'
-import BeatsTreats from '../assets/BeatsTreats.png'
-import YoutubeHunt from '../assets/YoutubeHunt.jpg'
+import AroundWorld from '../assets/2023/AroundWorld.png'
+import CulinaryConundrums from '../assets/2023/CulinaryConundrums.png'
+import CasinoHunt from '../assets/2023/CasinoHunt.png'
+import RiftIV from '../assets/2023/RiftIV.png'
+import ShojoWorld from '../assets/2023/ShojoWorld.png'
+import BeatsTreats from '../assets/2023/BeatsTreats.png'
+import YoutubeHunt from '../assets/2023/YoutubeHunt.jpg'
 
 // 2024 Puzzle Hunts
-import CosmicConundrums from '../assets/CosmicConundrums.png'
-import BlastPast from '../assets/BlastPast.png'
-import LostArcade from '../assets/LostArcade.png'
+import CosmicConundrums from '../assets/2024/CosmicConundrums.png'
+import BlastPast from '../assets/2024/BlastPast.png'
+import LostArcade from '../assets/2024/LostArcade.png'
 
 function Archive () {
   const startYear = 2019;
@@ -100,7 +111,15 @@ function Display2020 () {
 function Display2021 () {
   return (
     <div className="flex justify-center flex-wrap">
-
+      <OWeekFormat img={MagicShow} title="The Magic Show" form="http://bit.ly/escapemagic" solution=""/>
+      <HuntFormat img={EscapeMatrix} title="PuzzleSoc x MathSoc" pdf="http://bit.ly/3caNPvd" answer="" solution="https://bit.ly/3cNuxgY"/>
+      <HuntFormat img={Pokehunt} title="Pokehunt" pdf="https://bit.ly/3gHn8T8" answer="" solution="https://bit.ly/3gHn8T8"/>
+      <HuntFormat img={RiftII} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3wEeyt5" answer="" solution="https://bit.ly/344CGJ1"/>
+      <HuntFormat img={AppStore} title="Puzzles in the App Store" pdf="https://bit.ly/2TyznIk" answer="" solution="https://bit.ly/3dHwLyH"/>
+      <HuntFormat img={PixarLamp} title="Puzzles Under the Pixar Lamp" pdf="https://bit.ly/3lJ3XuA" answer="https://bit.ly/putplanswerchecking" solution="https://bit.ly/3s0Ouac"/>
+      <OWeekFormat img={GalleryHeist} title="PuzzleSoc x A&DSoc" form="https://forms.gle/eavkYZVCrwWVyoPv8" solution="https://bit.ly/3A91pdE"/>
+      <HuntFormat img={TrickTreat} title="PuzzleSoc x EcoSoc" pdf="https://bit.ly/3FSvMbm" answer="https://forms.gle/niX21kfTCfMaCY338" solution="https://bit.ly/2Z5UNiC"/>
+      <HuntFormat img={LifeCK} title="The Daily Life of CK the Cat" pdf="https://bit.ly/3Gehhhu" answer="" solution="https://bit.ly/2ZggzR6"/>
   </div>
   );
 }
