@@ -10,6 +10,15 @@ import OWeekFormat from '../components/OWeekFormat'
 // 2019 Puzzle Hunts
 import Cosmos from '../assets/2019/Cosmos.jpg'
 
+// 2020 Puzzle Hunts
+import StockMarket from '../assets/2020/StockMarket.jpg'
+import Potterverse from '../assets/2020/Potterverse.png'
+import CuriousVillage from '../assets/2020/CuriousVillage.jpg'
+import SpiritWorld from '../assets/2020/SpiritWorld.png'
+import AroundWorld from '../assets/2020/AroundWorld.jpg'
+import Rift from '../assets/2020/Rift.jpg'
+import Matsuri from '../assets/2020/Matsuri.jpg'
+
 // 2021 Puzzle Hunts
 import MagicShow from '../assets/2021/MagicShow.png'
 import EscapeMatrix from '../assets/2021/EscapeMatrix.png'
@@ -32,7 +41,7 @@ import TumblingTime from '../assets/2022/TumblingTime.jpg'
 import UntitledHunt from '../assets/2022/UntitledHunt.jpg'
 
 // 2023 Puzzle Hunts
-import AroundWorld from '../assets/2023/AroundWorld.png'
+import WorldDays from '../assets/2023/WorldDays.png'
 import CulinaryConundrums from '../assets/2023/CulinaryConundrums.png'
 import CasinoHunt from '../assets/2023/CasinoHunt.png'
 import RiftIV from '../assets/2023/RiftIV.png'
@@ -106,7 +115,13 @@ function Display2019 () {
 function Display2020 () {
   return (
     <div className="flex justify-center flex-wrap">
-
+      <HuntFormat img={StockMarket} title="Puzzles in the Stock Market" pdf="http://bit.ly/2OshA2z" answer="" solution=""/>
+      <HuntFormat img={Potterverse} title="Puzzles in the Potterverse" pdf="https://bit.ly/3oK1rCQ" answer="" solution=""/>
+      <HuntFormat img={CuriousVillage} title="Puzzles in the Curious Village" pdf="http://bit.ly/3edK5vF" answer="" solution=""/>
+      <OWeekFormat img={SpiritWorld} title="The Spirit World" form="https://forms.gle/nkb5LSLy2DeCExrr8" solution=""/>
+      <HuntFormat img={AroundWorld} title="PuzzleSoc x PsychSoc" pdf="http://bit.ly/3bl2vJg" answer="" solution=""/>
+      <HuntFormat img={Rift} title="PuzzleSoc x RiotSoc" pdf="http://bit.ly/38jUToe" answer="" solution=""/>
+      <HuntFormat img={Matsuri} title="Puzzles at Matsuri" pdf="https://bit.ly/3bAD9Ym" answer="" solution=""/>
   </div>
   );
 }
@@ -145,7 +160,7 @@ function Display2022 () {
 function Display2023 () {
   return (
     <div className="flex justify-center flex-wrap">
-      <OWeekFormat img={AroundWorld} title="Around the World in 7 Days" form="https://forms.gle/XzZMfYDeFpVGQ2ok6" solution="https://bit.ly/3KAqPrW"/>
+      <OWeekFormat img={WorldDays} title="Around the World in 7 Days" form="https://forms.gle/XzZMfYDeFpVGQ2ok6" solution="https://bit.ly/3KAqPrW"/>
       <HuntFormat img={CulinaryConundrums} title="Culinary Conundrums" pdf="https://bit.ly/3ZCltB3" answer="https://forms.gle/QDzTcSTtykbnvAhu9" solution="https://bit.ly/40IYBks"/>
       <HuntFormat img={CasinoHunt} title="The Casino" pdf="https://bit.ly/42tgGU1" answer="https://bit.ly/blastpast-check" solution="https://bit.ly/3N527l3"/>
       <HuntFormat img={RiftIV} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3Pm1TqH" answer="https://forms.gle/r8eyW7HqxtZ8RLR36" solution="https://bit.ly/3Kal1VL"/>
