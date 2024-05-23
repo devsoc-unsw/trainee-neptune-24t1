@@ -25,7 +25,7 @@ const YearDropdown: React.FC<DropdownProps> = ({ years, toggleDropdown, year, se
         <FontAwesomeIcon className="pl-2" icon={faCaretSquareDown} size="xs"/>
       </button>
       {dropdown && (
-        <div className="absolute w-full flex flex-col bg-white border border-gray-300 rounded shadow overflow-y-auto">
+        <div className="z-10 absolute w-full flex flex-col bg-white border border-gray-300 rounded shadow overflow-y-auto">
           {years.map((year) => (
             <button key={year} onClick={() => switchYear(year)} className="flex items-center justify-center w-full px-4 py-2 text-xl font-raleway transition duration-300 hover:bg-puzzleBlue hover:text-white">{year}</button>
         ))}
