@@ -8,9 +8,6 @@ function Landing () {
   return (
     <>
       <NavigationBar/>
-      <div id="events">
-        <SectionHeader heading="UPCOMING EVENTS"/>
-      </div>
       <SectionHeader heading="ABOUT US"/>
       <p className="p-2 font-raleway">
         We are a hobby society for individuals with a passion for problem-solving!

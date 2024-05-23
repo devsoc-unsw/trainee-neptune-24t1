@@ -11,7 +11,7 @@ function NavigationBar () {
           </Link>
         </div>
         <div>
-          <Link to="/" className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3">UPCOMING EVENTS</Link>
+          <Link to="/events" className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3">UPCOMING EVENTS</Link>
         </div>
         <div>
           <Link to="/guides" className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3">PUZZLE GUIDES</Link>
