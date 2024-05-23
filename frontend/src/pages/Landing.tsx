@@ -16,6 +16,7 @@ function Landing () {
         <li>Join a fun, social, and interactive community</li>
         <li>Develop creative and problem-solving skills</li>
       </p>
+      <SectionHeader heading="MEET THE TEAM"/>
       <SectionHeader heading="OUR SPONSORS"/>
       <Footer/>
     </>
