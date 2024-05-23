@@ -16,31 +16,31 @@ const HuntFormat: React.FC<HuntDetails> = ({title, img, form, pdf, interactive, 
       {form &&(
         <>
           <p className="px-2">Google Form:</p>
-          <a href={form} className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{form}</a>
+          <a href={form} target="_blank" rel="noopener noreferrer" className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{form}</a>
         </>
       )}
       {pdf &&(
         <>
           <p className="px-2">PDF:</p>
-          <a href={pdf} className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{pdf}</a>
+          <a href={pdf} target="_blank" rel="noopener noreferrer" className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{pdf}</a>
         </>
       )}
       {interactive &&(
         <>
           <p className="px-2">Interactive:</p>
-          <a href={interactive} className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{interactive}</a>
+          <a href={interactive} target="_blank" rel="noopener noreferrer" className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{interactive}</a>
         </>
       )}
       {answer &&(
         <>
           <p className="px-2">Answers:</p>
-          <a href={answer} className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{answer}</a>
+          <a href={answer} target="_blank" rel="noopener noreferrer" className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{answer}</a>
         </>
       )}
       {solution &&(
         <>
           <p className="px-2">Solutions:</p>
-          <a href={solution} className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{solution}</a>
+          <a href={solution} target="_blank" rel="noopener noreferrer" className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{solution}</a>
         </>
       )}
     </div>
