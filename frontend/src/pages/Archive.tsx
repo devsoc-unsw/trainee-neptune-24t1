@@ -5,7 +5,6 @@ import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
 import YearDropdown from '../components/YearDropdown';
 import HuntFormat from '../components/HuntFormat'
-import OWeekFormat from '../components/OWeekFormat'
 
 // 2019 Puzzle Hunts
 import Cosmos from '../assets/2019/Cosmos.jpg'
@@ -54,6 +53,64 @@ import CosmicConundrums from '../assets/2024/CosmicConundrums.png'
 import BlastPast from '../assets/2024/BlastPast.png'
 import LostArcade from '../assets/2024/LostArcade.png'
 
+interface HuntDetails {
+  img: string;
+  title: string;
+  pdf?: string;
+  interactive?: string;
+  form?: string;
+  answer?: string;
+  solution?: string;
+}
+
+const hunts = {
+  2019: [{ img: Cosmos, title:"Puzzles in the Cosmos", pdf: "https://bit.ly/3kQJYaG" }],
+  2020: [
+    { img: StockMarket, title: "Puzzles in the Stock Market", pdf: "https://bit.ly/2OshA2z", solution: "https://bit.ly/3qpypZp"},
+    { img: Potterverse, title: "Puzzles in the Potterverse", interactive: "http://bit.ly/3ccPuR0", pdf:"https://bit.ly/3oK1rCQ" },
+    { img: CuriousVillage, title: "Puzzles in the Curious Village", interactive:"http://bit.ly/3egMaHq", pdf: "https://bit.ly/3edK5vF" },
+    { img: SpiritWorld, title: "The Spirit World", form: "https://forms.gle/nkb5LSLy2DeCExrr8", interactive: "http://bit.ly/3kVWYfd" },
+    { img: AroundWorld, title: "PuzzleSoc x PsychSoc", interactive: "http://bit.ly/30gDWqy", pdf: "https://bit.ly/3bl2vJg" },
+    { img: Rift, title: "PuzzleSoc x RiotSoc", interactive:"http://bit.ly/38z108D", pdf: "https://bit.ly/38jUToe" },
+    { img: Matsuri, title: "Puzzles at Matsuri", interactive:"http://bit.ly/3rkzliS", pdf: "https://bit.ly/3bAD9Ym" }
+  ],
+  2021: [
+    { img: MagicShow, title: "The Magic Show", form: "https://bit.ly/escapemagic" },
+    { img: EscapeMatrix, title: "PuzzleSoc x MathSoc", pdf: "https://bit.ly/3caNPvd", solution: "https://bit.ly/3cNuxgY" },
+    { img: Pokehunt, title: "Pokehunt", interactive:"https://bit.ly/2QyyKNs", pdf: "https://bit.ly/3gHn8T8", solution: "https://bit.ly/3gHn8T8" },
+    { img: RiftII, title: "PuzzleSoc x RiotSoc", pdf: "https://bit.ly/3wEeyt5", solution: "https://bit.ly/344CGJ1" },
+    { img: AppStore, title: "Puzzles in the App Store", interactive:"https://bit.ly/3wjg82N", pdf: "https://bit.ly/2TyznIk", solution: "https://bit.ly/3dHwLyH" },
+    { img: PixarLamp, title: "Puzzles Under the Pixar Lamp", pdf: "https://bit.ly/3lJ3XuA", answer: "https://bit.ly/putplanswerchecking", solution: "https://bit.ly/3s0Ouac" },
+    { img: GalleryHeist, title: "PuzzleSoc x A&DSoc", form: "https://forms.gle/eavkYZVCrwWVyoPv8", solution: "https://bit.ly/3A91pdE" },
+    { img: TrickTreat, title: "PuzzleSoc x EcoSoc", pdf: "https://bit.ly/3FSvMbm", answer: "https://forms.gle/niX21kfTCfMaCY338", solution: "https://bit.ly/2Z5UNiC" },
+    { img: LifeCK, title: "The Daily Life of CK the Cat", pdf: "https://bit.ly/3Gehhhu", solution: "https://bit.ly/2ZggzR6" },
+  ],
+  2022: [
+    { img: WildWoods, title: "The Wild Woods", form: "https://bit.ly/thewildwoods", solution: "https://bit.ly/3sHM1nj" },
+    { img: CosmosII, title: "Puzzles in the Cosmos II", pdf: "https://bit.ly/3MMZ0vD", answer: "https://forms.gle/pxPqZ9xrL8KyxqRP7", solution: "https://bit.ly/3tWtClQ" },
+    { img: OmensOccult, title: "Omens and the Occult", pdf: "https://bit.ly/3Gse4w5", answer: "https://bit.ly/occultanswercheck", solution: "https://bit.ly/3wPRSaO" },
+    { img: PurrfectParade, title: "PuzzleSoc x GenSoc", form: "https://forms.gle/kdQXXNkwLrgt5nTy8", solution: "https://bit.ly/3c0jH9E" },
+    { img: RiftIII, title: "PuzzleSoc x RiotSoc", pdf: "https://bit.ly/3OKjGEj", answer: "https://bit.ly/potr3checker", solution: "https://bit.ly/3zH9VCL" },
+    { img: GhibliHunt, title: "PuzzleSoc x A&DSoc", pdf: "https://bit.ly/3DArneF", answer: "https://bit.ly/ghiblicheck", solution: "https://bit.ly/3DDnwNA" },
+    { img: TumblingTime, title: "Tumbling Through Time", pdf: "https://bit.ly/3FieDsd", answer: "https://bit.ly/ttt-check", solution: "https://bit.ly/3UMMXC4" },
+    { img: UntitledHunt, title: "Untitled Puzzle Hunt", pdf: "https://bit.ly/3Pzsq2p", answer: "https://forms.gle/ia7XCa6iSSZQMBzU9", solution: "https://bit.ly/3V7o9V4" },
+  ],
+  2023: [
+    { img: WorldDays, title: "Around the World in 7 Days", form: "https://forms.gle/XzZMfYDeFpVGQ2ok6", solution: "https://bit.ly/3KAqPrW" },
+    { img: CulinaryConundrums, title: "Culinary Conundrums", pdf: "https://bit.ly/3ZCltB3", answer: "https://forms.gle/QDzTcSTtykbnvAhu9", solution: "https://bit.ly/40IYBks" },
+    { img: CasinoHunt, title: "The Casino", pdf: "https://bit.ly/42tgGU1", answer: "https://bit.ly/blastpast-check", solution: "https://bit.ly/3N527l3" },
+    { img: RiftIV, title: "PuzzleSoc x RiotSoc", pdf: "https://bit.ly/3Pm1TqH", answer: "https://forms.gle/r8eyW7HqxtZ8RLR36", solution: "https://bit.ly/3Kal1VL" },
+    { img: ShojoWorld, title: "PuzzleSoc x AUNSW", pdf: "https://bit.ly/45ycS6d", answer: "https://forms.gle/yYHPweJW9Z3ATkDC8", solution: "https://bit.ly/3L5KS1o" },
+    { img: BeatsTreats, title: "PuzzleSoc x LofiSoc", pdf: "https://bit.ly/3sJzgva", solution: "https://bit.ly/46lrTry" },
+    { img: YoutubeHunt, title: "Youtube Hunt", pdf: "https://bit.ly/47q04zJ", answer: "https://bit.ly/youwontbelieve-check", solution: "https://bit.ly/40MMLGZ" },
+  ],
+  2024: [
+    { img: CosmicConundrums, title: "Cosmic Conundrums", form: "https://forms.gle/imFc3aWRYdhHFYi89", solution: "https://bit.ly/439tjFx" },
+    { img: LostArcade, title: "Lost in the Arcade", pdf:"https://bit.ly/4a7uO9H", answer: "https://bit.ly/lostarcade-check", solution: "https://bit.ly/3IpmLZX" },
+    { img: BlastPast, title: "Blast From the Past", answer: "https://bit.ly/blastpast-check" }
+  ]
+}
+
 function Archive () {
   const startYear = 2019;
   const currentYear = new Date().getFullYear();
@@ -92,91 +149,26 @@ function Archive () {
       <div className="flex justify-center">
         <YearDropdown years={years} toggleDropdown={toggleDropdown} year={year} setYear={setYear} setDropdown={setDropdown} dropdown={dropdown} dropdownRef={dropdownRef}/>
       </div>
-      {year === '2019' && <Display2019/>}
-      {year === '2020' && <Display2020/>}
-      {year === '2021' && <Display2021/>}
-      {year === '2022' && <Display2022/>}
-      {year === '2023' && <Display2023/>}
-      {year === '2024' && <Display2024/>}
+      {year === '2019' && <DisplayHunts hunts={hunts[2019]}/>}
+      {year === '2020' && <DisplayHunts hunts={hunts[2020]}/>}
+      {year === '2021' && <DisplayHunts hunts={hunts[2021]}/>}
+      {year === '2022' && <DisplayHunts hunts={hunts[2022]}/>}
+      {year === '2023' && <DisplayHunts hunts={hunts[2023]}/>}
+      {year === '2024' && <DisplayHunts hunts={hunts[2024]}/>}
       <div className="mb-10"></div>
       <Footer/>
     </>
   );
 }
 
-function Display2019 () {
+function DisplayHunts({ hunts }: { hunts: HuntDetails[] }) {
   return (
     <div className="flex justify-center flex-wrap">
-      <HuntFormat img={Cosmos} title="Puzzles in the Cosmos" pdf="https://bit.ly/3kQJYaG" answer="" solution=""/>
-  </div>
-  );
-}
-
-function Display2020 () {
-  return (
-    <div className="flex justify-center flex-wrap">
-      <HuntFormat img={StockMarket} title="Puzzles in the Stock Market" pdf="https://bit.ly/2OshA2z" answer="" solution=""/>
-      <HuntFormat img={Potterverse} title="Puzzles in the Potterverse" pdf="https://bit.ly/3oK1rCQ" answer="" solution=""/>
-      <HuntFormat img={CuriousVillage} title="Puzzles in the Curious Village" pdf="https://bit.ly/3edK5vF" answer="" solution=""/>
-      <OWeekFormat img={SpiritWorld} title="The Spirit World" form="https://forms.gle/nkb5LSLy2DeCExrr8" solution=""/>
-      <HuntFormat img={AroundWorld} title="PuzzleSoc x PsychSoc" pdf="https://bit.ly/3bl2vJg" answer="" solution=""/>
-      <HuntFormat img={Rift} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/38jUToe" answer="" solution=""/>
-      <HuntFormat img={Matsuri} title="Puzzles at Matsuri" pdf="https://bit.ly/3bAD9Ym" answer="" solution=""/>
-  </div>
-  );
-}
-
-function Display2021 () {
-  return (
-    <div className="flex justify-center flex-wrap">
-      <OWeekFormat img={MagicShow} title="The Magic Show" form="https://bit.ly/escapemagic" solution=""/>
-      <HuntFormat img={EscapeMatrix} title="PuzzleSoc x MathSoc" pdf="https://bit.ly/3caNPvd" answer="" solution="https://bit.ly/3cNuxgY"/>
-      <HuntFormat img={Pokehunt} title="Pokehunt" pdf="https://bit.ly/3gHn8T8" answer="" solution="https://bit.ly/3gHn8T8"/>
-      <HuntFormat img={RiftII} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3wEeyt5" answer="" solution="https://bit.ly/344CGJ1"/>
-      <HuntFormat img={AppStore} title="Puzzles in the App Store" pdf="https://bit.ly/2TyznIk" answer="" solution="https://bit.ly/3dHwLyH"/>
-      <HuntFormat img={PixarLamp} title="Puzzles Under the Pixar Lamp" pdf="https://bit.ly/3lJ3XuA" answer="https://bit.ly/putplanswerchecking" solution="https://bit.ly/3s0Ouac"/>
-      <OWeekFormat img={GalleryHeist} title="PuzzleSoc x A&DSoc" form="https://forms.gle/eavkYZVCrwWVyoPv8" solution="https://bit.ly/3A91pdE"/>
-      <HuntFormat img={TrickTreat} title="PuzzleSoc x EcoSoc" pdf="https://bit.ly/3FSvMbm" answer="https://forms.gle/niX21kfTCfMaCY338" solution="https://bit.ly/2Z5UNiC"/>
-      <HuntFormat img={LifeCK} title="The Daily Life of CK the Cat" pdf="https://bit.ly/3Gehhhu" answer="" solution="https://bit.ly/2ZggzR6"/>
-  </div>
-  );
-}
-
-function Display2022 () {
-  return (
-    <div className="flex justify-center flex-wrap">
-      <OWeekFormat img={WildWoods} title="The Wild Woods" form="https://bit.ly/thewildwoods" solution="https://bit.ly/3sHM1nj"/>
-      <HuntFormat img={CosmosII} title="Puzzles in the Cosmos II" pdf="https://bit.ly/3MMZ0vD" answer="https://forms.gle/pxPqZ9xrL8KyxqRP7" solution="https://bit.ly/3tWtClQ"/>
-      <HuntFormat img={OmensOccult} title="Omens and the Occult" pdf="https://bit.ly/3Gse4w5" answer="https://bit.ly/occultanswercheck" solution="https://bit.ly/3wPRSaO"/>
-      <OWeekFormat img={PurrfectParade} title="PuzzleSoc x GenSoc" form="https://forms.gle/kdQXXNkwLrgt5nTy8" solution="https://bit.ly/3c0jH9E"/>
-      <HuntFormat img={RiftIII} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3OKjGEj" answer="https://bit.ly/potr3checker" solution="https://bit.ly/3zH9VCL"/>
-      <HuntFormat img={GhibliHunt} title="PuzzleSoc x A&DSoc" pdf="https://bit.ly/3DArneF" answer="https://bit.ly/ghiblicheck" solution="https://bit.ly/3DDnwNA"/>
-      <HuntFormat img={TumblingTime} title="Tumbling Through Time" pdf="https://bit.ly/3FieDsd" answer="https://bit.ly/ttt-check" solution="https://bit.ly/3UMMXC4"/>
-      <HuntFormat img={UntitledHunt} title="Untitled Puzzle Hunt" pdf="https://bit.ly/3Pzsq2p" answer="https://forms.gle/ia7XCa6iSSZQMBzU9" solution="https://bit.ly/3V7o9V4"/>
-    </div>
-  );
-}
-
-function Display2023 () {
-  return (
-    <div className="flex justify-center flex-wrap">
-      <OWeekFormat img={WorldDays} title="Around the World in 7 Days" form="https://forms.gle/XzZMfYDeFpVGQ2ok6" solution="https://bit.ly/3KAqPrW"/>
-      <HuntFormat img={CulinaryConundrums} title="Culinary Conundrums" pdf="https://bit.ly/3ZCltB3" answer="https://forms.gle/QDzTcSTtykbnvAhu9" solution="https://bit.ly/40IYBks"/>
-      <HuntFormat img={CasinoHunt} title="The Casino" pdf="https://bit.ly/42tgGU1" answer="https://bit.ly/blastpast-check" solution="https://bit.ly/3N527l3"/>
-      <HuntFormat img={RiftIV} title="PuzzleSoc x RiotSoc" pdf="https://bit.ly/3Pm1TqH" answer="https://forms.gle/r8eyW7HqxtZ8RLR36" solution="https://bit.ly/3Kal1VL"/>
-      <HuntFormat img={ShojoWorld} title="PuzzleSoc x AUNSW" pdf="https://bit.ly/45ycS6d" answer="https://forms.gle/yYHPweJW9Z3ATkDC8" solution="https://bit.ly/3L5KS1o"/>
-      <HuntFormat img={BeatsTreats} title="PuzzleSoc x LofiSoc" pdf="https://bit.ly/3sJzgva" answer="" solution="https://bit.ly/46lrTry"/>
-      <HuntFormat img={YoutubeHunt} title="Youtube Hunt" pdf="https://bit.ly/47q04zJ" answer="https://bit.ly/youwontbelieve-check" solution="https://bit.ly/40MMLGZ"/>
-  </div>
-  );
-}
-
-function Display2024 () {
-  return (
-    <div className="flex justify-center flex-wrap">
-      <OWeekFormat img={CosmicConundrums} title="Cosmic Conundrums" form="https://forms.gle/imFc3aWRYdhHFYi89" solution="https://bit.ly/439tjFx"/>
-      <HuntFormat img={LostArcade} title="Lost in the Arcade" pdf="https://bit.ly/4a7uO9H" answer="https://bit.ly/lostarcade-check" solution="https://bit.ly/3IpmLZX"/>
-      <HuntFormat img={BlastPast} title="Blast From the Past" pdf="" answer="https://bit.ly/blastpast-check" solution=""/>
+      {hunts.map((item: any, index: any) => (
+        <div key={index} className="max-w-96 my-5 mx-5 bg-slate-100 py-3 px-3 font-raleway rounded-md">
+          <HuntFormat title={item.title} img={item.img} form={item.form} pdf={item.pdf} interactive={item.interactive} answer={item.answer} solution={item.solution}/>
+        </div>
+      ))}
     </div>
   );
 }
