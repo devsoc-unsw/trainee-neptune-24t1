@@ -33,8 +33,8 @@ const HuntFormat: React.FC<HuntDetails> = ({title, img, form, pdf, interactive, 
       )}
       {answer &&(
         <>
-          <p className="px-2">Answers:</p>
-          <a href={answer} target="_blank" rel="noopener noreferrer" className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{answer}</a>
+          <p className="px-2">Answer-Checker:</p>
+          <a href={answer} className="px-2 pb-4 text-blue-500 underline hover:text-blue-900">{answer}</a>
         </>
       )}
       {solution &&(

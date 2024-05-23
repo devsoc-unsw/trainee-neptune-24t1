@@ -4,14 +4,14 @@ import { Link } from 'react-router-dom';
 function NavigationBar () {
   return (
     <>
-      <nav className="z-20 sticky top-0 bg-puzzleBlue transition duration-500 opacity-90 hover:opacity-100 m-0 min-w-full h-16 flex justify-evenly items-center font-raleway text-white">
+      <nav className="z-10 sticky top-0 bg-puzzleBlue transition duration-500 opacity-90 hover:opacity-100 m-0 min-w-full h-16 flex justify-evenly items-center font-raleway text-white">
         <div>
           <Link to="/">
             <img src="logo.png" alt="logo" className="max-w-10 max-h-10"/>
           </Link>
         </div>
         <div>
-          <Link to="/" className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3">UPCOMING EVENTS</Link>
+          <Link to="/events" className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3">UPCOMING EVENTS</Link>
         </div>
         <div>
           <Link to="/guides" className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3">PUZZLE GUIDES</Link>
