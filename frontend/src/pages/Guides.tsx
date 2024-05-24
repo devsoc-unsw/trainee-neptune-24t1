@@ -3,7 +3,6 @@ import React from 'react';
 import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
-import ImageCarousel from '../components/Carousel'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IconDefinition } from "@fortawesome/fontawesome-common-types"
@@ -83,7 +82,7 @@ function Rebus() {
 function DisplayComponents ({ img, component, text }: {img: IconDefinition, component: string, text: string }) {
   return (
     <div className="flex flex-col w-full">
-      <div className="bg-blue-50 border-blue-300 border pt-16 pb-6 mb-5"><FontAwesomeIcon className="place-self-center size-20 mb-10" icon={img}/></div>
+      <div className="bg-slate-100 border-slate-300 border pt-16 pb-6 mb-5"><FontAwesomeIcon className="place-self-center size-20 mb-10" icon={img}/></div>
       <div className="text-left font-raleway">
         <p className="text-lg text-center"><b>{component}</b></p>
         <p>{text}</p>
@@ -146,9 +145,9 @@ function DisplayExample({ solution, img }: { solution:string, img:string }) {
   return (
     <div className="flex flex-col">
       <img src={`${img}`}></img>
-      <details className="mt-3 bg-slate-100 p-5">
+      <details className="mt-3 bg-slate-100 py-3 px-5">
         <summary className="hover:cursor-pointer">Show solution</summary>
-        <p className="ml-5 mr-3 mt-1"><i>{solution}</i></p>
+        <p className="ml-5 mr-3 my-1 overflow-y-auto max-h-32"><i>{solution}</i></p>
       </details>
     </div>
   )
