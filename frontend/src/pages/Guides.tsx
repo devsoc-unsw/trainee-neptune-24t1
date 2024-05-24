@@ -114,7 +114,7 @@ function Cryptic () {
   return (
     <div className="flex flex-col">
       <SectionHeader heading="CRYPTIC"/>
-      <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-10">
+      <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
         <p>A cryptic clue is similar to a riddle but contains 3 important parts: definition, cue and the leftovers. The definition is usually a word (or more) either at the start or the end of a clue. Cue words or phrases hint at what you should do with leftovers to obtain part of or the final answer. Cryptics usually target pattern recognition</p>
         <p className="py-3">Common cues used are:</p>
         <br></br>
@@ -136,9 +136,9 @@ function Cryptic () {
 
       <SectionHeader heading="Examples"/>
       <div className="grid grid-cols-3 mt-8 gap-16 w-4/5 place-self-center text-left">
-        <DisplayCryptic answer="Bare" img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/428613497_381327351274158_7429692494230726708_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Wg02bgWEeJcQ7kNvgH560Mr&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYBZjrt2_7__Z7mStIpvdOkUuMYTS4Pz6NxkGRZTE0YOgw&oe=6656086C"/>
-        <DisplayCryptic answer="Imposter" img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/430172762_385103177563242_2835744654873056541_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=XwEQiAzpaqAQ7kNvgGqaaPP&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYDtviZx3dJbWEl49hoK0Wm7JO6BOsirG4VCzqKKPKx_iQ&oe=66560FE9"/>
-        <DisplayCryptic answer="Secure" img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/433501398_400766139330279_6373752198853041375_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MIMVSCkM4RcQ7kNvgGYAG5h&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYCifcSJQ1_34_5mA_20zXqwHBXprWQQPdLtne9QyHHqAA&oe=665629D7"/>
+        <DisplayCryptic solution="'Unsalted' is the cue, and from chemistry we know that salt is NaCl. Then we notice that the word barnacle contains the letters from NaCl. So we remove those letters from barnacle which leaves us with 'bare'. This aligns with the definition word of 'plain' and hence the answer is 'bare'." img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/428613497_381327351274158_7429692494230726708_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Wg02bgWEeJcQ7kNvgH560Mr&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYBZjrt2_7__Z7mStIpvdOkUuMYTS4Pz6NxkGRZTE0YOgw&oe=6656086C"/>
+        <DisplayCryptic solution="Notice that 'My name is...' is specifically in quotes. Another way of saying this is 'I'm'. Now, another word for sender is 'poster' and when we combine these together, we get 'imposter' which aligns with the definition word 'fake' and hence is our final answer." img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/430172762_385103177563242_2835744654873056541_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=XwEQiAzpaqAQ7kNvgGqaaPP&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYDtviZx3dJbWEl49hoK0Wm7JO6BOsirG4VCzqKKPKx_iQ&oe=66560FE9"/>
+        <DisplayCryptic solution="'Starting' is a cue for using initials and hence taking the 'two starting' initials of 'searching' we get 'se'. Now we need 'an antidote' AFTER 'se'. Another word for antidote is 'cure' and when we piece them together, we get 'secure' which fits the defintion word 'obtain' and is our final answer" img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/433501398_400766139330279_6373752198853041375_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=MIMVSCkM4RcQ7kNvgGYAG5h&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYCifcSJQ1_34_5mA_20zXqwHBXprWQQPdLtne9QyHHqAA&oe=665629D7"/>
       </div>
       <div className="mb-20"></div>
 
@@ -146,13 +146,13 @@ function Cryptic () {
   );
 }
 
-function DisplayCryptic({ img, answer }: { img: string, answer: string}) {
+function DisplayCryptic({ solution, img }: { solution:string, img:string}) {
   return (
     <div className="flex flex-col">
       <img src={`${img}`}></img>
-      <details className="mt-3 bg-slate-100 p-3">
-        <summary className="pl-3">Show answer</summary>
-        <p className="ml-8"><i>{answer}</i></p>
+      <details className="mt-3 bg-slate-100 p-5">
+        <summary className="">Show solution</summary>
+        <p className="ml-5 mr-3 mt-1 h-56"><i>{solution}</i></p>
       </details>
     </div>
   )
