@@ -12,7 +12,7 @@ const HuntFormat: React.FC<HuntDetails> = ({title, img, form, pdf, interactive, 
   return (
     <div className="flex flex-col items-start">
       <img src={img} className="aspect-video rounded"></img>
-      <h1 className="place-self-center rounded my-5 text-2xl"><b> {title}</b></h1>
+      <h1 className="place-self-center rounded my-3 text-2xl"><b> {title}</b></h1>
       {form &&(
         <>
           <p className="px-2">Google Form:</p>
