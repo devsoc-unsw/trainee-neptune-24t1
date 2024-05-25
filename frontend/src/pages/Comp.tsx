@@ -2,9 +2,9 @@ import React from 'react';
 
 import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
+import SectionHeader from '../components/SectionHeading';
 
 function Comp () {
-  const date = new Date();
   const [day, setDay] = React.useState('M');
 
   const switchDay = (event: React.SyntheticEvent, weekday: string) => {
@@ -29,18 +29,62 @@ function Comp () {
   );
 }
 
+// most recent Monday puzzle
 function Monday () {
+
+  const examplePuzzle = {
+    title: 't2_w1',
+    img: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/435065715_407911401949086_8469336516791600997_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QDj4tdKIGZQQ7kNvgF_9ELZ&_nc_ht=scontent.fsyd11-1.fna&oh=00_AYBkmEj01S0jeIe_ekCGtwADkEJGhEV_w6UJgBcTLuceVg&oe=66575C5A',
+    answer: 'bonding'
+  }
+
+  const [name, setName] = React.useState('');
+  const [answer, setAnswer] = React.useState('');
+
+  const submit = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    if (!name) {
+      // temporary
+      alert('please enter a name');
+      return;
+    }
+    if (answer !== examplePuzzle.answer) {
+      // temporary
+      alert('wrong');
+      return;
+    }
+  }
+
   return (
-    <></>
+    <div className="flex flex-col justify-center">
+      <SectionHeader heading={examplePuzzle.title}/>
+      <div className="flex flex-row justify-center p-10">
+        <img className="h-80 mx-5" src={examplePuzzle.img} alt="banner"/>
+        <div className="flex flex-col justify-between text-left mx-5 font-raleway">
+          <form className="flex flex-col text-left" onSubmit={submit}>
+            <h2 className="text-lg font-bold my-3">Submission Form</h2>
+            <label htmlFor="name">Your name</label>
+            <input className="my-1 px-1 py-2" type="text" name="name" id="name" placeholder="John Doe" onChange={event => setName(event.target.value)} />
+            <label htmlFor="submission">Your answer</label>
+            <input className="my-1 px-1 py-2" type="text" name="submission" id="submission" placeholder="youranswerhere" onChange={event => setAnswer(event.target.value)}/>
+            <input className="m-1 h-8 max-w-28 rounded-md outline outline-puzzleBlue-light hover:bg-puzzleBlue-light font-bold cursor-pointer" type="submit" value="SUBMIT"/>
+          </form>
+          <h2 className="text-lg my-3">If you answer correctly, you'll be the <b>[ ]th</b> correct submission!</h2>
+        </div>
+      </div>
+      <SectionHeader heading="Leaderboard"/>
+    </div>
   )
 }
 
+// most recent Wednesday puzzle
 function Wednesday () {
   return (
     <></>
   )
 }
 
+// most recent Friday puzzle
 function Friday () {
   return (
     <></>
