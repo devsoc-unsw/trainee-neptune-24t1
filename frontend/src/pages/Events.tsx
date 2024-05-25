@@ -33,13 +33,15 @@ function Events () {
     <>
       <NavigationBar/>
       <SectionHeader heading="UPCOMING EVENTS"/>
-      <div className="flex flex-row justify-center">
+      <div className="flex justify-center mt-8">
+        <div className="flex flex-col w-4/5">
         {events.map((event, index) => (
-          <div key={index} className="w-1/4 mx-8 my-4 p-4 bg-gray-100 rounded font-raleway">
-            <img className="rounded" src={event.banner} alt="banner"/>
-            <div className="text-left py-2">
-              <h2 className="font-bold my-2">{event.title}</h2>
-              <p>{event.description}</p>
+          <div key={index} className="items-center flex flex-row my-2 p-2 bg-gray-100 rounded-lg font-raleway">
+            <img className="max-w-96 min-h-56 place-self-center rounded p-1" src={event.banner} alt="banner"/>
+            <div className="max-h-56 flex flex-col text-left px-5">
+              <h2 className="font-bold text-2xl my-2">{event.title}</h2>
+              <p className="overflow-y-auto">{event.description}</p>
+              <br></br>
               <div className="flex justify-between items-center mt-2">
                 <div className="hover:text-puzzleBlue-dark"><strong className="mr-3">DATE</strong>{event.date}</div>
                 <a className="flex justify-end items-baseline cursor-pointer underline-offset-4 decoration-1 decoration-puzzleBlue hover:underline" href={event.url} target="_blank">
@@ -50,6 +52,7 @@ function Events () {
             </div>
           </div>
         ))}
+        </div>
       </div>
       <Footer/>
     </>
