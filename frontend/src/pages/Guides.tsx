@@ -113,7 +113,7 @@ function Logic () {
   return (
     <div className="flex flex-col items-center">
       <SectionHeader heading="LOGIC"/>
-      <div className="flex flex-col w-3/5 font-raleway text-left text-xl m-8">
+      <div className="flex flex-col w-3/5 font-raleway text-left text-xl m-5">
         <p>Logic puzzles are grid puzzles like sudoku that come with a variety of different rules and styles. These aim to challenge deductive reasoning, comprehension and logic skills where you narrow different possibilities or aim to make the best choice out of many possibilities.</p>
       </div>
       <p className="text-3xl font-raleway mt-10"><b>Some Example Types:</b></p>
