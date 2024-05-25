@@ -24,23 +24,32 @@ function Events () {
     date: '28 May 2024'
   }
 
+  const events = [];
+  events.push(event);
+  events.push(event);
+  events.push(event);
+
   return (
     <>
       <NavigationBar/>
       <SectionHeader heading="UPCOMING EVENTS"/>
-      <div className="w-1/4 mx-8 p-4 bg-gray-100 font-raleway">
-        <img className="" src={event.banner} alt="banner"/>
-        <div className="text-left py-2">
-          <h2 className="font-bold my-2">{event.title}</h2>
-          <p>{event.description}</p>
-          <div className="flex justify-between items-center mt-2">
-            <div className="hover:text-puzzleBlue-dark py-1"><strong className="mr-3">DATE</strong>{event.date}</div>
-            <a className="flex justify-end items-baseline cursor-pointer underline-offset-4 decoration-1 decoration-puzzleBlue hover:underline" href={event.url} target="_blank">
-              <span className="mx-1">Find out more</span>
-              <FontAwesomeIcon icon={faAnglesRight} size="xs"/>
-            </a>
+      <div className="flex flex-row justify-center">
+        {events.map((event, index) => (
+          <div key={index} className="w-1/4 mx-8 my-4 p-4 bg-gray-100 font-raleway">
+            <img className="" src={event.banner} alt="banner"/>
+            <div className="text-left py-2">
+              <h2 className="font-bold my-2">{event.title}</h2>
+              <p>{event.description}</p>
+              <div className="flex justify-between items-center mt-2">
+                <div className="hover:text-puzzleBlue-dark py-1"><strong className="mr-3">DATE</strong>{event.date}</div>
+                <a className="flex justify-end items-baseline cursor-pointer underline-offset-4 decoration-1 decoration-puzzleBlue hover:underline" href={event.url} target="_blank">
+                  <span className="mx-1">Find out more</span>
+                  <FontAwesomeIcon icon={faAnglesRight} size="xs"/>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+        ))}
       </div>
       <Footer/>
     </>
