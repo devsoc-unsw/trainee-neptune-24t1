@@ -37,7 +37,7 @@ function Events () {
             <div className="hover:text-puzzleBlue-dark py-1"><strong className="mr-3">DATE</strong>{event.date}</div>
             <a className="flex justify-end items-baseline cursor-pointer underline-offset-4 decoration-1 decoration-puzzleBlue hover:underline" href={event.url} target="_blank">
               <span className="mx-1">Find out more</span>
-              <FontAwesomeIcon className="animate-bounce" icon={faAnglesRight} size="xs"/>
+              <FontAwesomeIcon icon={faAnglesRight} size="xs"/>
             </a>
           </div>
         </div>
