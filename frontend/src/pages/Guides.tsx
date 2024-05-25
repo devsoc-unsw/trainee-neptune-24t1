@@ -42,8 +42,8 @@ function DisplayLeft ({ img, title, text }: { img:string, title:string, text:str
   return (
     <div className="flex flex-row m-3 bg-slate-100">
       <img src={img} className="p-5"></img>
-      <div className="place-self-center p-5 text-left font-raleway text-lg">
-        <p className="text-2xl pb-3"><b>{title}</b></p>
+      <div className="place-self-center pr-8 text-right font-raleway text-xl">
+        <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
       </div>
     </div>
@@ -53,8 +53,8 @@ function DisplayLeft ({ img, title, text }: { img:string, title:string, text:str
 function DisplayRight ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
     <div className="flex flex-row m-3 bg-slate-100">
-      <div className="place-self-center p-5 text-right font-raleway text-lg">
-        <p className="text-2xl pb-3"><b>{title}</b></p>
+      <div className="place-self-center pl-8 text-left font-raleway text-xl">
+        <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
       </div>
       <img src={img} className="p-5"></img>
