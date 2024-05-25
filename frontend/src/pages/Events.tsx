@@ -16,6 +16,7 @@ function Events () {
   //   date: 
   // };
 
+  // For testing, should link to backend later
   const event = {
     banner: 'https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/445687730_122156156618084186_3431698342416514101_n.jpg?stp=cp6_dst-jpg&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-8Z_JOTN6_IQ7kNvgGHipN9&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYCLRybWd52O6JyZieU4rm1wDvsnPJzjfiwD2Nhs7LtHYw&oe=6654F1B7',
     title: 'PuzzleSoc x DevSoc Presents: A DEV-THEMED GAMES NIGHT',
@@ -23,7 +24,6 @@ function Events () {
     url: 'https://www.facebook.com/events/1426532081562135/',
     date: '28 May 2024'
   }
-
   const events = [];
   events.push(event);
   events.push(event);
@@ -35,8 +35,8 @@ function Events () {
       <SectionHeader heading="UPCOMING EVENTS"/>
       <div className="flex flex-row justify-center">
         {events.map((event, index) => (
-          <div key={index} className="w-1/4 mx-8 my-4 p-4 bg-gray-100 font-raleway">
-            <img className="" src={event.banner} alt="banner"/>
+          <div key={index} className="w-1/4 mx-8 my-4 p-4 bg-gray-100 rounded font-raleway">
+            <img className="rounded" src={event.banner} alt="banner"/>
             <div className="text-left py-2">
               <h2 className="font-bold my-2">{event.title}</h2>
               <p>{event.description}</p>
