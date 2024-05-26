@@ -96,9 +96,9 @@ const Form: React.FC<Puzzle> = ({ title, img, answer }) => {
           <form className="flex flex-col text-left" onSubmit={submit}>
             <h2 className="text-lg font-bold my-3">Submission Form</h2>
             <label htmlFor="name">Your name</label>
-            <input className="my-1 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="name" id="name" placeholder="John Doe" onChange={event => setName(event.target.value)} value={name} />
+            <input className="mb-2 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="name" id="name" placeholder="John Doe" onChange={event => setName(event.target.value)} value={name} />
             <label htmlFor="submission">Your answer</label>
-            <input className="my-1 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="submission" id="submission" placeholder="youranswerhere" onChange={event => setUserAnswer(event.target.value)} value={userAnswer} />
+            <input className="mb-2 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="submission" id="submission" placeholder="youranswerhere" onChange={event => setUserAnswer(event.target.value)} value={userAnswer} />
             <div className="flex flex-row justify-between m-2">
               <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-puzzleBlue-light hover:bg-puzzleBlue-light font-bold cursor-pointer align-items-center" type="submit" value="SUBMIT"/>
               <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-red-400 hover:bg-red-400 font-bold cursor-pointer" type="reset" value="RESET" onClick={reset} />
