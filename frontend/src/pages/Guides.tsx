@@ -4,7 +4,6 @@ import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Aquarium from '../assets/Logics/Aquarium.png'
 import Hashi from '../assets/Logics/Hashi.png'
 import Minesweeper from '../assets/Logics/Minesweeper.png'
@@ -26,6 +25,10 @@ function DisplayComponent ({ img, component, text }: {img: string, component: st
   )
 }
 
+function imageClick () {
+
+}
+
 function DisplayExample ({ solution, img }: { solution:string, img:string }) {
   return (
     <div className="flex flex-col">
@@ -40,8 +43,8 @@ function DisplayExample ({ solution, img }: { solution:string, img:string }) {
 
 function DisplayLeft ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100">
-      <img src={img} className="p-5"></img>
+    <div className="flex flex-row m-3 bg-slate-100 max-h-60 aspect-square">
+      <img onClick={e => imageClick()} src={img} className="p-5"></img>
       <div className="place-self-center pr-8 text-right font-raleway text-xl">
         <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
@@ -52,7 +55,7 @@ function DisplayLeft ({ img, title, text }: { img:string, title:string, text:str
 
 function DisplayRight ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100">
+    <div className="flex flex-row m-3 bg-slate-100 max-h-60 aspect-square">
       <div className="place-self-center pl-8 text-left font-raleway text-xl">
         <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
@@ -116,35 +119,35 @@ function Logic () {
       <div className="flex flex-col w-3/5 font-raleway text-left text-xl m-5">
         <p>Logic puzzles are grid puzzles like sudoku that come with a variety of different rules and styles. These aim to challenge deductive reasoning, comprehension and logic skills where you narrow different possibilities or aim to make the best choice out of many possibilities.</p>
       </div>
-      <p className="text-3xl font-raleway mt-10"><b>Some Example Types:</b></p>
-      <div className="flex flex-col w-3/5 px-5 mt-5">
+      <p className="text-3xl font-raleway mt-14"><b>Some Example Types:</b></p>
 
+      <div className="flex flex-col w-3/5 px-5 mt-5">
         <DisplayLeft img={Minesweeper} title="Minesweeper" text="The goal of the game is to clear every non-landmine box and mark every landmine cell with a flag. A number tells you how many landmines there are in the surrounding 8 cells. One tip is to clear random cells at the beginning of the game."/>
         <DisplayRight img={Pipes} title="Pipes" text="The goal of the game is to make sure all pipes are connected and flow with water by rotating each pipe. A tip is to start with edge pieces that connect to three other pipes since you know that it must connect to three other pipes and there are only three other sides it can connect to."/>
         <DisplayLeft img={Nonogram} title="Nonogram" text="The goal of the game is to figure out which cells to fill in based on the numbers on the outside. A number tells you how many cells are filled in each row/column. A tip is to start on the row/column with the highest number and deduce which cell is filled throughout all possibilities."/>
         <DisplayRight img={Aquarium} title="Aquarium" text="The goal of the game is to fill each region with a section of water. The rules are identical to the nonogram with an extra one. For each tank, if there is water in a cell, then cells in the same row or below must be filled due to the laws of physics."/>
         <DisplayLeft img={Hashi} title="Hashi" text="The goal of this game is to connect all islands (circles) with each other. The number on a circle depicts how many bridges (lines) it has that are connected to other islands. An island can only have max two bridges."/>
         <DisplayRight img={Shikaku} title="Shikaku" text="The goal of this game is to fill the entire grid with smaller rectangles. A number depicts the area of the rectangle it's in. For example we can see that rectangles with the number 3 has an area of 3. Rectangles can be any width and height."/>
-        
       </div>
 
       <SectionHeader heading="Examples"/>
       <div className="flex flex-col place-self-center">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-4/5 p-5 mt-8 gap-8 place-self-center text-left">
           <DisplayExample
-            solution="Notice that there is a running star and a tee shirt. We can shorten the tee shirt to just 'tee' to get 'a running star' + 'tee'. Combining these together we get 'a running start' which is our final answer."
-            img="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/427881775_376524211754472_3977462887851308538_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2wQj5v-Fh4YQ7kNvgFSNQhX&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYCspsLu8AQ7UTVXbuDuNSrUQomf4UqXVwv4dM4y5IbqnQ&oe=6656AD54"
+            solution="The rules for this logic puzzle is simple, we must only traverse either horizontally or vertically in a consecutive path from number 1 to 81. Since we don't have definitive information about where 1 should be, we can start with 2 and come back to 1 later. Notice the only way to get from 3 to 5 is to place a 4 below the 5. Then to get from 5 to 8, we must go above 5 to 6 then left to 7 and left to 8. We continue this path of thinking until we reach 81 then we trace from the green arrow and collect all the numbers, indexing them with the alphabet and wrapping around to yield an answer."
+            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/428608918_380247801382113_37063456505260312_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FF3VP1T8FvoQ7kNvgHY0qZl&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYBkLjavJdlVjDkEBwqSAtCfxHQDbxEWvcwZraRZnSIeKw&oe=66590F1A"
           />
           <DisplayExample
-            solution="The ellipse outside 'The Rosie' resembles a ring. Now thinking of some prepositions, we find that 'around' works the best as this gives us 'Ring around The Rosie' which is our final answer."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/431368313_391607733579453_5627088026296427759_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Egc4P2X8g68Q7kNvgFbmKTr&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYAWNZeCC05wI2t63BHQAdWzMNl9u41hn4-twd9BdBuH7w&oe=6656AE15"
+            solution="TBA"
+            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/430915764_388165153923711_8890790327536728054_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=yi_9eLA4E7kQ7kNvgEcR6gg&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYBHeGCB9IEHEPCxAKGxjGYa41RK94DGYfAnARv1LxLgug&oe=6658FBF3"
           />
           <DisplayExample
-            solution="We can see that there is a bee on top of a bell. However that doesn't straight away give us anything so we must look closer to the noise symbols. This tells us it is actually a bee on ding. If we write this out we get bonding, which is our final answer."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/435065715_407911401949086_8469336516791600997_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QDj4tdKIGZQQ7kNvgH86JfJ&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYCtf9B8OMH05wwqAB2898nXFQBed-vfUq_ZOl78DA4ERg&oe=6656B39A"
+            solution="TBA"
+            img="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/437929596_412043868202506_9018495140568725692_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2XoRgJ2EluIQ7kNvgHyG_5M&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYA-jMbZPe_Im-OC-x7LI5r--Hl9sbyC6GbyjPZPt9OAkQ&oe=66590570"
           />
         </div>
       </div>
+
       <div className="mb-10"></div>
     </div>
   );
@@ -202,20 +205,20 @@ function Minipuzz () {
         <p><b>Extraction:</b></p>
         <p>Typically, the type of extraction will always be hinted in the given text (also known as flavour text) through cue words that link to some sort of extraction mechanism or instruction. Next you'll want to think of how you can apply this to the result of your initial solve.</p>
       </div>
-      <SectionHeader heading="Other Examples"/>
+      <SectionHeader heading="Examples"/>
       <div className="flex flex-col place-self-center w-4/5">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-16 place-self-center text-left">
           <DisplayExample
-            solution="Notice that there is a running star and a tee shirt. We can shorten the tee shirt to just 'tee' to get 'a running star' + 'tee'. Combining these together we get 'a running start' which is our final answer."
-            img="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/427881775_376524211754472_3977462887851308538_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2wQj5v-Fh4YQ7kNvgFSNQhX&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYCspsLu8AQ7UTVXbuDuNSrUQomf4UqXVwv4dM4y5IbqnQ&oe=6656AD54"
+            solution="You might notice some of these words actually come from phrases with the first word missing. These phrases are 'one small step for man', 'two can play at that game', 'three strikes and you're out' and 'four horsemen of the apocalypse'. Next we draw four lines linking the boxes in order of the numbers in the phrases respectively. This will make out the answer 'spin'."
+            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/430982886_387069637366596_8701555422166210618_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5KHb75JggNoQ7kNvgGKLoII&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYB2EEerw4HYhbJfocMmWYbwjiMvgkgne407M6O48TEVIw&oe=66591DE4"
           />
           <DisplayExample
-            solution="The ellipse outside 'The Rosie' resembles a ring. Now thinking of some prepositions, we find that 'around' works the best as this gives us 'Ring around The Rosie' which is our final answer."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/431368313_391607733579453_5627088026296427759_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Egc4P2X8g68Q7kNvgFbmKTr&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYAWNZeCC05wI2t63BHQAdWzMNl9u41hn4-twd9BdBuH7w&oe=6656AE15"
+            solution="The phrases'back to front' and 'same message' hint at finding palindromes for each line. Ewe, SOS, ere, madam, APA, solos, gag, kayak. Taking the 'unique' letters we get the answer 'wordplay'."
+            img="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/431035450_390285660378327_7298229047443792686_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=xjCCBUjCBPYQ7kNvgEmY0Bm&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYArBSQ3FZVOyM2EVkeQ2OFoAsy1yx0C9NyvDoQH2OS7pQ&oe=66591316"
           />
           <DisplayExample
-            solution="We can see that there is a bee on top of a bell. However that doesn't straight away give us anything so we must look closer to the noise symbols. This tells us it is actually a bee on ding. If we write this out we get bonding, which is our final answer."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/435065715_407911401949086_8469336516791600997_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QDj4tdKIGZQQ7kNvgH86JfJ&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYCtf9B8OMH05wwqAB2898nXFQBed-vfUq_ZOl78DA4ERg&oe=6656B39A"
+            solution="The first box points from s + quill + a + bull - qu which gives us 'syllable', hinting at converting the words into syllable counts. Next we have a rebus for 'letter' where we convert our syllable counts into letters. Then the 'alphabet mirror' rebus tells us to 'mirror' the letters we have across the middle of the alphabet. Finally, there is an image of what looks like a wheel turning forward with a 5 above it. This cues at shifting the letters forward by 5. We then have an arrow facing up, suggesting we read the letters from bottom to top to yield us an answer of 'decay'."
+            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/437859738_414349177971975_2146388222790218514_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nQCjuaa-1SgQ7kNvgFDFO3Z&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYAQtJvH3RDtUIFc8Ncz_VFqTiVKXev1Tnl-9VcyRMPl5Q&oe=66590782"
           />
         </div>
       </div>
