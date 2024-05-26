@@ -25,10 +25,6 @@ function DisplayComponent ({ img, component, text }: {img: string, component: st
   )
 }
 
-function imageClick () {
-
-}
-
 function DisplayExample ({ solution, img }: { solution:string, img:string }) {
   return (
     <div className="flex flex-col">
@@ -44,8 +40,8 @@ function DisplayExample ({ solution, img }: { solution:string, img:string }) {
 function DisplayLeft ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
     <div className="flex flex-row m-3 bg-slate-100 max-h-60 aspect-square">
-      <img onClick={e => imageClick()} src={img} className="p-5"></img>
-      <div className="place-self-center pr-8 text-right font-raleway text-xl">
+      <img src={img} className="p-5"></img>
+      <div className="place-self-center pr-8 text-right font-raleway text-lg">
         <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
       </div>
@@ -56,7 +52,7 @@ function DisplayLeft ({ img, title, text }: { img:string, title:string, text:str
 function DisplayRight ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
     <div className="flex flex-row m-3 bg-slate-100 max-h-60 aspect-square">
-      <div className="place-self-center pl-8 text-left font-raleway text-xl">
+      <div className="place-self-center pl-8 text-left font-raleway text-lg">
         <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
       </div>
