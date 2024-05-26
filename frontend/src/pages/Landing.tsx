@@ -24,9 +24,125 @@ function Landing () {
           </ul>
         </p>
         <SectionHeader heading="MEET THE TEAM"/>
+        <div className="flex flex-row m-4 font-raleway">
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182310778306570/1.png?ex=6654576b&is=665305eb&hm=2c7956353f06b188ab79d5f6d81b433077790f12adb6c6e5ba2ffa8d853ef044&" alt="team member profile" />
+          <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
+            <h2><strong className="font-bold">TIMOTHY LEUNG</strong> <span>PRESIDENT</span></h2>
+            <p>
+              Hi, I'm Timothy, a 4th year med student and your president for this year! You may recognise me from [too long ago] as I've been in this society since the first day of uni :ckHmm:. My intro to puzzles was the MIT mystery hunt, which I hope to help write this year. I recommend you all look at it (if only to see the scale of the puzzling world 👀)
+              <br/> 
+              A lot of my time these days is either spent gaming, at bouldering, or playing maimai. I listen to mostly Japanese music, so any jpop recs are welcome :{'>'} :blobMelt:
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <div className="max-h-52 max-w-2xl text-right leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">LUKE YANG</strong> <span>SECRETARY</span></h2>
+            <p>
+            Hey guys, its Luke 😄 .
+            I am secretary for Puzzlesoc in 2024 yay! 🥳 Currently, I am 3rd Year studying Computer Science/Science at UNSW. 
+            <br/>
+            My hobbies include cooking 🍳 , Football ⚽ , chronically watching Youtube , and touching grass (occasionally).  👯‍♂️ 
+            Some of my favourite puzzles include Latin Squares, Minesweeper 🏁 , Rebus, Loldle and figuring out how to get to Central. 🤣
+            My puzzle shows how I love food and where my next travel destination is, so if you solve it pls come with me. 🥺 
+            </p>
+          </div>
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182509978394624/2.png?ex=6654579b&is=6653061b&hm=6518ca98444fd90952989c1971870b847a6f8025af16800b9f5b2fb6e430dbb8&" alt="team member profile" />
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182520434790470/3.png?ex=6654579d&is=6653061d&hm=f9acafa2e98daabdbe27551ff2003f23ff738b4ca702db2eac275098d2389c45&" alt="team member profile" />
+          <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">ALISON LIN</strong> <span>ARC DEL/TREASURER</span></h2>
+            <p>
+            Hellooo I'm Alison and I'm a 2nd year studying physio! I'm the arc delegate & treasurer for this year. 🙂 🙂 
+            <br/>
+            I'm not very good at puzzles but if you start a puzzle race, it is nearly guaranteed that I will join the puzzle then proceed to leave it incomplete after realising I don't know where to begin. 🤡 My favourite puzzles are the few logic ones I can solve (ie. skyscrapers and LITS). :W_puzzle:
+            <br/>
+            Apart from unsuccessfully attempting puzzles, I also like going to the beach, hanging out with friends, listening to the same songs on repeat, and playing the piano. I also love to spam emojis when I message so be prepared. :huh: 
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <div className="max-h-52 max-w-2xl text-right leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">JORDAN WUNSCH</strong> <span>PUZZLE EVENTS</span></h2>
+            <p>
+            Hey everyone! I’m Jordan and I’m in my third year studying economics and commerce, and I’m also one of the Puzzle Events Directors for this year!
+            When I’m not working I’m usually reading (fantasy and sci fi are the best), gaming or struggling to play guitar.
+            <br/>
+            Over the past year I’ve gotten to like all kinds of puzzles but my favourites when I started were rebuses both because they were the only ones I could even remotely solve and because they are very satisfying when they click.
+            </p>
+          </div>
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409714494935060/4.png?ex=6653d9b4&is=66528834&hm=383e985ec1dcb6108e5776da1e30072a8e745adc17d6a6a56f26609c0e3c5e80&" alt="team member profile" />
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409750025146429/5.png?ex=6653d9bd&is=6652883d&hm=208935fc9104bd96250655f1725a211bf9763e03bb6b9a1bbac4f4ed9e0a7647&" alt="team member profile" />
+          <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">JIAN WANG</strong> <span>PUZZLE EVENTS</span></h2>
+            <p>
+            Hey guys! I'm Jian and I'm one of your fellow Puzzle Events Directors 🧩 for this year! I am currently in second year and studying an actuarial studies/computer science degree. Some of my hobbies include sleeping, eating yummy food, light gaming and the last one can be figured out through my puzzle below!
+            <br/>
+            Now, some of my favourite puzzles include cryptics, rebus and basically any puzzle with a creative mechanism! These are especially satisfying when you solve them 🧐. Other things I also enjoy doing are hanging out with friends, card games and the occasional ice skating (even when it's cold).
+            <br/>
+            I'm definitely excited for what this year will bring and I'm looking forward to seeing you all! Also, if you see me on campus, feel free to say hi!
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <div className="max-h-52 max-w-2xl text-right leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">TIM WAN</strong> <span>SOCIAL EVENTS/GRIEVANCE OFFICER</span></h2>
+            <p>
+            Heya! 🙂 My name is Tim and I'm a third year studying computer science!  I'll be the social events director and grievance officer for 2024, so feel free to say hi to me at any activity, I promise I'll be friendly!
+            <br/>
+            I love puzzles, as evident in doing those nyt mini dailies everyday (except when i forget, which is often), so I really like word puzzles. However, my absolute favourite ones are when a really unique or creative mechanic is used - solving those feel super satisfying {'>_<'}.
+            <br/>
+            Outside of puzzles, i really like hanging with friends, listening to music (drop recs!), playing piano/trumpet/guitar, going to the arcade, playing board games and taking walks.
+            </p>
+          </div>
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409813036040243/6.png?ex=6653d9cc&is=6652884c&hm=eeaca3a5c86d704784cccf8e1ae4d25d699a99d37a1bba2dcf329c1235a26a04&" alt="team member profile" />
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409840735363112/7.png?ex=6653d9d2&is=66528852&hm=699127d9bac2ea4377c1d0638e3f6cfd3ff224f3de81c5464fb0f032efe20705&" alt="team member profile" />
+          <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">EMILY NING</strong> <span>DESIGN</span></h2>
+            <p>
+            Hallo everyone!! I'm Em, a 2nd year computer science student, and the Design Director for this year! ~☆
+            <br/>
+            My fav puzzles are rebuses and logic puzzles! (anything without huge blocks of text (Ｔ▽Ｔ) ironic i know).  In my free time I like to draw/make scrapbooks, watch cartoons (feel free to discuss shows with me), hang out with friends, rollerblade, and play musical instruments (i own a lot). I listen to a variety of music genres but my fav is pop punk.
+            </p>
+          </div>
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <div className="max-h-52 max-w-2xl text-right leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">PETER YANG</strong> <span>MARKETING</span></h2>
+            <p>
+            Hey guys, I’m Peter! I study CS / MATH (recently transferred from ACTL 🤡) and I’m the Marketing Director this year!!
+            <br/>
+            I like to visualise my puzzles 🤔 and therefore I enjoy puzzles like rebus and Quintessential.
+            <br/>
+            My favourite (non-alcoholic) drink is kombucha 🤤 but I also get bubble tea every second day 🙈 (basically whenever I leave the house). I also love reading Webnovels 💀 in my spare time.
+            <br/>
+            Follow us on socials 😃😃
+            </p>
+          </div>
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409875401277471/8.png?ex=6653d9db&is=6652885b&hm=696d3853e01c53fc1efcd438ba9c4f7c35ac619713ff49ab1507d3c2b10cbdea&" alt="team member profile" />
+        </div>
+        <div className="flex flex-row m-4 font-raleway">
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204908898809815151/ck.png?ex=6654591b&is=6653079b&hm=8a816ab2afb76ecb587273c9b64df240bcbe1a76b6788037259c6727a6eff746&" alt="team member profile" />
+          <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
+          <h2><strong className="font-bold">CK</strong> <span>MASCOT</span></h2>
+            <p>
+            I'm CK, PuzzleSoc's mascot, and I turn three this year! Last year, I had so much fun writing my own puzzle that I had to write another one!
+            <br/>
+            Full Name: CK the cat (i.e. curiosity killed the cat)
+            Nicknames: Cookie, Calvin Klein™️
+            Pronouns: they/them
+            Likes: puzzles, detective stories, escape rooms, napping, fashionable hats, nature documentaries
+            Dislikes: spoilers in the chat/comments, cheese holes
+            </p>
+          </div>
+        </div>
         <SectionHeader heading="OUR SPONSORS"/>
       </div>
-
       <Footer/>
     </>
   );
