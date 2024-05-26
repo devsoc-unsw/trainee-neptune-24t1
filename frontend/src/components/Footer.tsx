@@ -6,7 +6,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 function Footer () {
   return (
     <>
-      <div className="bg-slate-100 dark:bg-slate-600 dark:text-slate-200 flex justify-between p-6 bottom-0 min-w-full">
+      <div className="bg-slate-100 dark:bg-slate-600 dark:text-slate-200 flex justify-between p-6 bottom-0 min-w-full transition duration-200">
           <span>&copy; UNSW Puzzle Society</span>
           <div className="flex space-x-6">
             <a href="https://discord.gg/2MqMrs2MG8" target="_blank" className="text-[#7289da] hover:text-blue-900 transition duration-300">

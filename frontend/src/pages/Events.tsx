@@ -42,14 +42,14 @@ function Events () {
   return (
     <>
       <NavigationBar/>
-      <img className="mb-3 dark:brightness-90" src={EventBanner}></img>
+      <img className="mb-3 dark:brightness-90 transition duration-200" src={EventBanner}></img>
       <SectionHeader heading="UPCOMING EVENTS"/>
       <div className="flex justify-center mt-5">
         <div className="flex flex-col w-4/5">
         {events.map((event, index) => (
-          <div key={index} className="flex flex-row my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway">
+          <div key={index} className="flex flex-row my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
             <img className="max-w-96 min-h-56 aspect-video place-self-center rounded p-1" src={event.banner} alt="banner"/>
-            <div className="max-h-56 flex flex-col text-left pl-5 pr-2 dark:text-slate-100">
+            <div className="max-h-56 flex flex-col text-left pl-5 pr-2 dark:text-slate-100 transition duration-200">
               <h2 className="font-bold text-2xl pt-2">{event.title}</h2>
               <p className="overflow-y-auto mt-2">{event.description}</p>
               <br></br>

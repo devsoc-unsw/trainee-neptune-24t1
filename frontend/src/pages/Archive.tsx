@@ -165,7 +165,7 @@ function DisplayHunts({ hunts }: { hunts: HuntDetails[] }) {
     <div className="flex justify-center">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
         {hunts.map((item: any, index: any) => (
-          <div key={index} className="max-w-96 my-5 mx-5 bg-slate-100 dark:bg-slate-700 py-3 px-3 font-raleway rounded-md">
+          <div key={index} className="max-w-96 my-5 mx-5 bg-slate-100 dark:bg-slate-700 py-3 px-3 font-raleway rounded-md transition duration-200">
             <HuntFormat title={item.title} img={item.img} form={item.form} pdf={item.pdf} interactive={item.interactive} answer={item.answer} solution={item.solution}/>
           </div>
         ))}

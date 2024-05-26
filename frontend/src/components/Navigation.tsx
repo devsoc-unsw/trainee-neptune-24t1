@@ -12,7 +12,7 @@ function NavigationBar () {
       document.documentElement.classList.add('dark');
       document.documentElement.classList.add('bg-slate-900');
       if (!document.documentElement.classList.contains('transition')) {
-        document.documentElement.classList.add('transition', 'duration-300' , 'ease-in-out');
+        document.documentElement.classList.add('transition', 'duration-200' , 'ease-in-out');
       }
     }
   }

@@ -88,7 +88,7 @@ const Form: React.FC<Puzzle> = ({ title, img, answer }) => {
   }
 
   return (
-    <div className="flex flex-col justify-center dark:text-slate-100">
+    <div className="flex flex-col justify-center dark:text-slate-100 transition duration-200">
       <SectionHeader heading={title}/>
       <div className="flex flex-row justify-center p-10">
         <img className="h-80 mx-5 rounded drop-shadow duration-100 hover:scale-105" src={img} alt="banner"/>
