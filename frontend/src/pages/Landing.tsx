@@ -1,4 +1,5 @@
 // import React from 'react';
+import { Link } from "react-router-dom";
 
 import NavigationBar from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -11,14 +12,20 @@ function Landing () {
   return (
     <>
       <NavigationBar/>
-
+      <div className="flex flex-col justify-center self-stretch h-screen mb-6">
+        <img className="absolute -z-10 opacity-90 h-full w-full object-cover" src="https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D"/>
+        <div className="font-bold self-center">
+          <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">WELCOME TO</p>
+          <h1 className="text-5xl text-white transition duration-100 hover:text-transparent bg-clip-text bg-gradient-to-r from-cyan-100 to-puzzleBlue">UNSW PUZZLE SOCIETY</h1>
+        </div>
+      </div>
       <div className="flex flex-col items-center">
-        <SectionHeader heading="ABOUT US"/>
         <div className="flex flex-col items-center p-2 font-raleway text-left">
+          <SectionHeader heading="ABOUT US"/>
           We are a hobby society for individuals with a passion for problem-solving!
           <ul>
-            <li><FontAwesomeIcon icon={faPuzzlePiece} /> Learn rebus, logic, and cryptic puzzles</li>
-            <li><FontAwesomeIcon icon={faPuzzlePiece} /> Compete and win in puzzle hunts</li>
+            <li><FontAwesomeIcon icon={faPuzzlePiece} /> <Link className="text-puzzleBlue underline-offset-2 decoration-1 hover:underline decoration-puzzleBlue" to="/guides">Learn</Link> rebus, logic, and cryptic puzzles</li>
+            <li><FontAwesomeIcon icon={faPuzzlePiece} /> Compete and win in <Link className="text-puzzleBlue underline-offset-2 decoration-1 hover:underline decoration-puzzleBlue" to="/comp">online tournaments</Link>  and <Link className="text-puzzleBlue underline-offset-2 decoration-1 hover:underline decoration-puzzleBlue" to="/archive">puzzle hunts</Link></li>
             <li><FontAwesomeIcon icon={faPuzzlePiece} /> Join a fun, social, and interactive community</li>
             <li><FontAwesomeIcon icon={faPuzzlePiece} /> Develop creative and problem-solving skills</li>
           </ul>
