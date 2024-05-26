@@ -6,6 +6,7 @@ import SectionHeader from '../components/SectionHeading';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
+import EventBanner from '../assets/EventBanner.png';
 
 function Events () {
   // const event = {
@@ -41,13 +42,14 @@ function Events () {
   return (
     <>
       <NavigationBar/>
+      <img className="mb-3 dark:brightness-90" src={EventBanner}></img>
       <SectionHeader heading="UPCOMING EVENTS"/>
-      <div className="flex justify-center mt-8">
+      <div className="flex justify-center mt-5">
         <div className="flex flex-col w-4/5">
         {events.map((event, index) => (
-          <div key={index} className="items-center flex flex-row my-2 p-2 bg-gray-100 rounded-lg font-raleway">
+          <div key={index} className="items-center flex flex-row my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway">
             <img className="max-w-96 min-h-56 aspect-video place-self-center rounded p-1" src={event.banner} alt="banner"/>
-            <div className="max-h-56 flex flex-col text-left pl-5 pr-2 justify-center">
+            <div className="max-h-56 flex flex-col text-left pl-5 pr-2 justify-center dark:text-slate-100">
               <h2 className="font-bold text-2xl mt-4">{event.title}</h2>
               <p className="overflow-y-auto mt-2">{event.description}</p>
               <br></br>

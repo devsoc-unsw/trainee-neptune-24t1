@@ -26,10 +26,34 @@ function DisplayComponent ({ img, component, text }: {img: string, component: st
 }
 
 function DisplayExample ({ solution, img }: { solution:string, img:string }) {
+  const [large, setSize] = React.useState(false);
+  const imageRef = React.useRef<HTMLDivElement>(null);
+
+  const toggleSize = () => {
+    setSize(!large);
+  }
+  
+  const handleClick = (event: MouseEvent) => {
+    if (imageRef.current) {
+      if (!imageRef.current.contains(event.target as Node) && large) {
+        setSize(false);
+      }
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('click', handleClick);
+    return () => {
+      window.removeEventListener('click', handleClick);
+    }
+  });
+
   return (
-    <div className="flex flex-col">
-      <img src={`${img}`}></img>
-      <details className="mt-3 bg-gray-200 py-3 px-5">
+    <div className="flex flex-col dark:text-slate-100">
+      <div ref={imageRef} className={`${large ? 'z-10' : 'z-0'}`}>
+      <img onClick={toggleSize} className={`dark:brightness-90 cursor-pointer ${large ? 'scale-150 border border-slate-900 transition duration-300 ease-in-out' : 'scale-100 transition duration-300 ease-in-out'}`} src={`${img}`}></img>
+      </div>
+      <details className="mt-3 bg-gray-200 dark:bg-slate-700 py-3 px-5">
         <summary className="hover:cursor-pointer">Show solution</summary>
         <p className="ml-5 mr-3 my-1 overflow-y-auto max-h-36"><i>{solution}</i></p>
       </details>
@@ -39,7 +63,7 @@ function DisplayExample ({ solution, img }: { solution:string, img:string }) {
 
 function DisplayLeft ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100 max-h-60 aspect-square">
+    <div className="flex flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 max-h-60 aspect-square">
       <img src={img} className="p-5"></img>
       <div className="place-self-center pr-8 text-right font-raleway text-lg">
         <p className="text-3xl pb-3"><b>{title}</b></p>
@@ -51,7 +75,7 @@ function DisplayLeft ({ img, title, text }: { img:string, title:string, text:str
 
 function DisplayRight ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100 max-h-60 aspect-square">
+    <div className="flex flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 max-h-60 aspect-square">
       <div className="place-self-center pl-8 text-left font-raleway text-lg">
         <p className="text-3xl pb-3"><b>{title}</b></p>
         <p>{text}</p>
@@ -63,7 +87,7 @@ function DisplayRight ({ img, title, text }: { img:string, title:string, text:st
 
 function Rebus() {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center dark:text-slate-100">
       <SectionHeader heading="REBUS" /> 
       <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
       <p>A rebus is a type of visual puzzle where words and images are used in abstract ways to represent an answer which are usually common phrases, idioms and can even be a single word. These puzzles typically target visual perception and creative thinking skills.</p>
@@ -110,7 +134,7 @@ function Rebus() {
 
 function Logic () {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center dark:text-slate-100">
       <SectionHeader heading="LOGIC"/>
       <div className="flex flex-col w-3/5 font-raleway text-left text-xl m-5">
         <p>Logic puzzles are grid puzzles like sudoku that come with a variety of different rules and styles. These aim to challenge deductive reasoning, comprehension and logic skills where you narrow different possibilities or aim to make the best choice out of many possibilities.</p>
@@ -151,7 +175,7 @@ function Logic () {
 
 function Cryptic () {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col dark:text-slate-100">
       <SectionHeader heading="CRYPTIC"/>
       <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
         <p>A cryptic clue is similar to a riddle but contains 3 important parts: definition, cue and the leftovers. The definition is usually a word (or more) either at the start or the end of a clue. Cue words or phrases hint at what you should do with leftovers to obtain part of or the final answer. Cryptics target pattern recognition, critical thinking and comprehension skills.</p>
@@ -190,7 +214,7 @@ function Cryptic () {
 
 function Minipuzz () {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col dark:text-slate-100">
       <SectionHeader heading="MINIPUZZ"/>
       <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
         <p>Minipuzzes, short for mini puzzles can be any type of puzzle not limited to just rebus, logics or cryptics. These can be a combination of many puzzles types or can be just one type. Minipuzzes can typically be broken into two sections: the initial solve and extraction.</p>
@@ -234,10 +258,10 @@ function Guides () {
     <>
       <NavigationBar/>
       <div className="mt-10">
-        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${puzzleType === 'rebus' ? 'bg-blue-100' : 'bg-gray-100 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'rebus')}>Rebus</button>
-        <button className={`border-x py-2 px-4 transition duration-300 ${puzzleType === 'logic' ? 'bg-blue-100' : 'bg-gray-100 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'logic')}>Logic</button>
-        <button className={`border-r py-2 px-4 transition duration-300 ${puzzleType === 'cryptic' ? 'bg-amber-100' : 'bg-gray-100 hover:bg-amber-100'}`} onClick={e => switchGuide(e, 'cryptic')}>Cryptic</button>
-        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${puzzleType === 'minipuzz' ? 'bg-pink-100' : 'bg-gray-100 hover:bg-pink-100'}`} onClick={e => switchGuide(e, 'minipuzz')}>Minipuzz</button>
+        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${puzzleType === 'rebus' ? 'bg-blue-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'rebus')}>Rebus</button>
+        <button className={`border-x py-2 px-4 transition duration-300 ${puzzleType === 'logic' ? 'bg-blue-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'logic')}>Logic</button>
+        <button className={`border-r py-2 px-4 transition duration-300 ${puzzleType === 'cryptic' ? 'bg-amber-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-amber-100'}`} onClick={e => switchGuide(e, 'cryptic')}>Cryptic</button>
+        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${puzzleType === 'minipuzz' ? 'bg-pink-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-pink-100'}`} onClick={e => switchGuide(e, 'minipuzz')}>Minipuzz</button>
       </div>
       {puzzleType === 'rebus' && <Rebus/>}
       {puzzleType === 'logic' && <Logic/>}
