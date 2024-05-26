@@ -14,7 +14,7 @@ function Landing () {
 
       <div className="flex flex-col items-center">
         <SectionHeader heading="ABOUT US"/>
-        <p className="flex flex-col items-center p-2 font-raleway text-left">
+        <div className="flex flex-col items-center p-2 font-raleway text-left">
           We are a hobby society for individuals with a passion for problem-solving!
           <ul>
             <li><FontAwesomeIcon icon={faPuzzlePiece} /> Learn rebus, logic, and cryptic puzzles</li>
@@ -22,7 +22,7 @@ function Landing () {
             <li><FontAwesomeIcon icon={faPuzzlePiece} /> Join a fun, social, and interactive community</li>
             <li><FontAwesomeIcon icon={faPuzzlePiece} /> Develop creative and problem-solving skills</li>
           </ul>
-        </p>
+        </div>
         <SectionHeader heading="MEET THE TEAM"/>
         <div className="flex flex-row m-4 font-raleway">
           <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182310778306570/1.png?ex=6654576b&is=665305eb&hm=2c7956353f06b188ab79d5f6d81b433077790f12adb6c6e5ba2ffa8d853ef044&" alt="team member profile" />
@@ -142,6 +142,20 @@ function Landing () {
           </div>
         </div>
         <SectionHeader heading="OUR SPONSORS"/>
+        <div className="flex flex-row min-w-full justify-center items-center m-7">
+          <a href="https://www.arc.unsw.edu.au/">
+            <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://www.arc.unsw.edu.au/uploads/Arc%20Clubs%20Logo%202019-solid%20green.png" alt="arc logo" />
+          </a>
+          <a href="https://www.janestreet.com/">
+            <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://www.janestreet.com/assets/logo_horizontal-177b793d3559af186aa24ab7a93bea2c04d723f02e2ea905263735abe031f15b.png" alt="jane street logo"/>
+          </a>
+          <a href="https://puzzlecard.org/">
+            <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://images.squarespace-cdn.com/content/v1/5ec7d2acf3a8a555edc8271d/1612056539533-06N29JTGMKVZICCCL798/Mystery-Unfolds-Puzzle-Cards.png?format=1500w" alt="mystery unfolds logo" />
+          </a>
+          <a href="https://www.socialescape.com.au/">
+            <img className="max-h-16 bg-gray-800 rounded-sm p-3 mx-7 transition duration:100 hover:scale-105" src="https://www.socialescape.com.au/uploads/2/6/9/6/26968594/published/social-escape-logo-transparent-mini.gif?1686812403" alt="social escape logo" />
+          </a>
+        </div>
       </div>
       <Footer/>
     </>
