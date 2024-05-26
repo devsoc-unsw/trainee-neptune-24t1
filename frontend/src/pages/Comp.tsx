@@ -91,20 +91,20 @@ const Form: React.FC<Puzzle> = ({ title, img, answer }) => {
     <div className="flex flex-col justify-center">
       <SectionHeader heading={title}/>
       <div className="flex flex-row justify-center p-10">
-        <img className="h-80 mx-5" src={img} alt="banner"/>
+        <img className="h-80 mx-5 rounded drop-shadow duration-100 hover:scale-105" src={img} alt="banner"/>
         <div className="flex flex-col justify-between text-left mx-5 font-raleway">
           <form className="flex flex-col text-left" onSubmit={submit}>
-            <h2 className="text-lg font-bold my-3">Submission Form</h2>
+            <h2 className="text-xl font-bold my-2">Submission</h2>
             <label htmlFor="name">Your name</label>
             <input className="mb-2 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="name" id="name" placeholder="John Doe" onChange={event => setName(event.target.value)} value={name} />
             <label htmlFor="submission">Your answer</label>
             <input className="mb-2 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="submission" id="submission" placeholder="youranswerhere" onChange={event => setUserAnswer(event.target.value)} value={userAnswer} />
-            <div className="flex flex-row justify-between m-2">
+            <div className="flex flex-row justify-between my-2">
               <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-puzzleBlue-light hover:bg-puzzleBlue-light font-bold cursor-pointer align-items-center" type="submit" value="SUBMIT"/>
               <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-red-400 hover:bg-red-400 font-bold cursor-pointer" type="reset" value="RESET" onClick={reset} />
             </div>
           </form>
-          <h2 className="text-lg my-3">If you answer correctly, you'll be the <b>[ ]th</b> correct submission!</h2>
+          <h2 className="my-2">If you answer correctly, you'll be the <b>[ ]th</b> correct submission!</h2>
         </div>
       </div>
       <SectionHeader heading="Leaderboard"/>
