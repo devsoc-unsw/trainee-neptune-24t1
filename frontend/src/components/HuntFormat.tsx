@@ -10,7 +10,7 @@ interface HuntDetails {
 
 const HuntFormat: React.FC<HuntDetails> = ({title, img, form, pdf, interactive, answer, solution}) => {
   return (
-    <div className="flex flex-col items-start">
+    <div className="flex flex-col items-start dark:text-slate-200">
       <img src={img} className="aspect-video rounded"></img>
       <h1 className="place-self-center rounded my-3 text-2xl"><b> {title}</b></h1>
       {form &&(

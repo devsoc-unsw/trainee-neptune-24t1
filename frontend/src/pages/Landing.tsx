@@ -19,7 +19,7 @@ function Landing () {
           <h1 className="text-5xl text-white">UNSW PUZZLE SOCIETY</h1>
         </div>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center dark:text-slate-100">
         <div className="flex flex-col items-center p-2 font-raleway text-left">
           <SectionHeader heading="ABOUT US"/>
           We are a hobby society for individuals with a passion for problem-solving!
@@ -149,7 +149,7 @@ function Landing () {
           </div>
         </div>
         <SectionHeader heading="OUR SPONSORS"/>
-        <div className="flex flex-row min-w-full justify-center items-center m-7">
+        <div className="flex flex-row min-w-full justify-center items-center m-7 dark:bg-white py-5 relative top-7">
           <a href="https://www.arc.unsw.edu.au/">
             <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://www.arc.unsw.edu.au/uploads/Arc%20Clubs%20Logo%202019-solid%20green.png" alt="arc logo" />
           </a>
