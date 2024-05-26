@@ -15,7 +15,8 @@ function Landing () {
       <div className="flex flex-col justify-center self-stretch h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D')" }}>
         <div className="font-bold self-center">
           <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">WELCOME TO</p>
-          <h1 className="text-5xl text-white transition duration-100 hover:text-transparent bg-clip-text bg-gradient-to-r from-cyan-100 to-puzzleBlue-light">UNSW PUZZLE SOCIETY</h1>
+          <img className="hidden hover:inline-block" src="logo.png" alt="logo"/>
+          <h1 className="text-5xl text-white">UNSW PUZZLE SOCIETY</h1>
         </div>
       </div>
       <div className="flex flex-col items-center">
