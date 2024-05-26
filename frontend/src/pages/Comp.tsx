@@ -4,6 +4,12 @@ import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
 
+interface Puzzle {
+  title: string,
+  img: string,
+  answer: string
+}
+
 function Comp () {
   const [day, setDay] = React.useState('M');
 
@@ -38,51 +44,8 @@ function Monday () {
     answer: 'bonding'
   }
 
-  const [name, setName] = React.useState('');
-  const [answer, setAnswer] = React.useState('');
-
-  const submit = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    if (!name) {
-      // temporary
-      alert('please enter a name');
-      return;
-    }
-    if (answer !== examplePuzzle.answer) {
-      // temporary
-      alert('wrong');
-      return;
-    }
-  }
-
-  const reset = (event: React.SyntheticEvent) => {
-    event.preventDefault();
-    setName('');
-    setAnswer('');
-  }
-
   return (
-    <div className="flex flex-col justify-center">
-      <SectionHeader heading={examplePuzzle.title}/>
-      <div className="flex flex-row justify-center p-10">
-        <img className="h-80 mx-5" src={examplePuzzle.img} alt="banner"/>
-        <div className="flex flex-col justify-between text-left mx-5 font-raleway">
-          <form className="flex flex-col text-left" onSubmit={submit}>
-            <h2 className="text-lg font-bold my-3">Submission Form</h2>
-            <label htmlFor="name">Your name</label>
-            <input className="my-1 px-1 py-2" type="text" name="name" id="name" placeholder="John Doe" onChange={event => setName(event.target.value)} value={name} />
-            <label htmlFor="submission">Your answer</label>
-            <input className="my-1 px-1 py-2" type="text" name="submission" id="submission" placeholder="youranswerhere" onChange={event => setAnswer(event.target.value)} value={answer} />
-            <div className="flex flex-row justify-between">
-              <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-puzzleBlue-light hover:bg-puzzleBlue-light font-bold cursor-pointer align-items-center" type="submit" value="SUBMIT"/>
-              <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-red-400 hover:bg-red-400 font-bold cursor-pointer" type="reset" value="RESET" onClick={reset} />
-            </div>
-          </form>
-          <h2 className="text-lg my-3">If you answer correctly, you'll be the <b>[ ]th</b> correct submission!</h2>
-        </div>
-      </div>
-      <SectionHeader heading="Leaderboard"/>
-    </div>
+    <Form {...examplePuzzle} />
   )
 }
 
@@ -97,6 +60,55 @@ function Wednesday () {
 function Friday () {
   return (
     <></>
+  )
+}
+
+const Form: React.FC<Puzzle> = ({ title, img, answer }) => {
+  const [name, setName] = React.useState('');
+  const [userAnswer, setUserAnswer] = React.useState('');
+
+  const submit = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    if (!name) {
+      // temporary
+      alert('please enter a name');
+      return;
+    }
+    if (answer !== answer) {
+      // temporary
+      alert('wrong');
+      return;
+    }
+  }
+
+  const reset = (event: React.SyntheticEvent) => {
+    event.preventDefault();
+    setName('');
+    setUserAnswer('');
+  }
+
+  return (
+    <div className="flex flex-col justify-center">
+      <SectionHeader heading={title}/>
+      <div className="flex flex-row justify-center p-10">
+        <img className="h-80 mx-5" src={img} alt="banner"/>
+        <div className="flex flex-col justify-between text-left mx-5 font-raleway">
+          <form className="flex flex-col text-left" onSubmit={submit}>
+            <h2 className="text-lg font-bold my-3">Submission Form</h2>
+            <label htmlFor="name">Your name</label>
+            <input className="my-1 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="name" id="name" placeholder="John Doe" onChange={event => setName(event.target.value)} value={name} />
+            <label htmlFor="submission">Your answer</label>
+            <input className="my-1 px-1 py-2 border-b focus:outline-none focus:border-puzzleBlue" type="text" name="submission" id="submission" placeholder="youranswerhere" onChange={event => setUserAnswer(event.target.value)} value={userAnswer} />
+            <div className="flex flex-row justify-between m-2">
+              <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-puzzleBlue-light hover:bg-puzzleBlue-light font-bold cursor-pointer align-items-center" type="submit" value="SUBMIT"/>
+              <input className="m-1 px-2 h-8 max-w-28 rounded-md outline outline-red-400 hover:bg-red-400 font-bold cursor-pointer" type="reset" value="RESET" onClick={reset} />
+            </div>
+          </form>
+          <h2 className="text-lg my-3">If you answer correctly, you'll be the <b>[ ]th</b> correct submission!</h2>
+        </div>
+      </div>
+      <SectionHeader heading="Leaderboard"/>
+    </div>
   )
 }
 
