@@ -26,7 +26,7 @@ function Landing () {
           <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">WELCOME TO</p>
           <h1 className="text-5xl text-white">UNSW PUZZLE SOCIETY</h1>
         </div>
-        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-cyan-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
+        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-gray-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
       </div>
       <div className="flex flex-col items-center dark:text-slate-100 transition duration-200">
         <div ref={scrollTarget} className="flex flex-col items-center p-2 font-raleway text-left">
