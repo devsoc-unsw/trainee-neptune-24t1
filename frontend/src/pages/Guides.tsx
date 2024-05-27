@@ -11,20 +11,6 @@ import Nonogram from '../assets/Logics/Nonogram.png'
 import Pipes from '../assets/Logics/Pipes.png'
 import Shikaku from '../assets/Logics/Shikaku.png'
 
-function DisplayComponent ({ img, component, text }: {img: string, component: string, text: string }) {
-  return (
-    <div className="flex flex-col w-full items-center mb-10">
-      <div className="mb-3">
-        <img src={img} className="place-self-center"></img>
-      </div>
-      <div className="text-left font-raleway bg-slate-100 border-slate-300 border p-3 mx-3 h-56">
-        <p className="text-lg text-center"><b>{component}</b></p>
-        <p>{text}</p>
-      </div>
-    </div>
-  )
-}
-
 function DisplayExample ({ solution, img }: { solution:string, img:string }) {
   const [large, setSize] = React.useState(false);
   const imageRef = React.useRef<HTMLDivElement>(null);

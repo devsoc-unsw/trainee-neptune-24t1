@@ -7,10 +7,10 @@ function NavigationBar () {
   const toggleDark = () => {
     if (document.documentElement.classList.contains('dark')) {
       document.documentElement.classList.remove('dark');
-      document.documentElement.classList.remove('bg-slate-900');
+      document.documentElement.classList.remove('bg-gray-900');
     } else {
       document.documentElement.classList.add('dark');
-      document.documentElement.classList.add('bg-slate-900');
+      document.documentElement.classList.add('bg-gray-900');
       if (!document.documentElement.classList.contains('transition')) {
         document.documentElement.classList.add('transition', 'duration-200' , 'ease-in-out');
       }
@@ -37,9 +37,7 @@ function NavigationBar () {
         <div>
           <Link to="/comp" className="transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3">WEEKLY COMP</Link>
         </div>
-        <div onClick={(e) => toggleDark()} className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3 rounded-2xl hover:cursor-pointer">
-          <FontAwesomeIcon icon={faMoon} size="xl"/>
-        </div>
+        <FontAwesomeIcon onClick={toggleDark} className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3 hover:cursor-pointer" icon={faMoon} size="lg"/>
       </nav>
     </>
   );
