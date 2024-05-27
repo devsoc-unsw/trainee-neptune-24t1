@@ -79,10 +79,10 @@ function Landing () {
             Over the past year I’ve gotten to like all kinds of puzzles but my favourites when I started were rebuses both because they were the only ones I could even remotely solve and because they are very satisfying when they click.
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409714494935060/4.png?ex=6653d9b4&is=66528834&hm=383e985ec1dcb6108e5776da1e30072a8e745adc17d6a6a56f26609c0e3c5e80&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409714494935060/4.png?ex=66552b34&is=6653d9b4&hm=40ca8fa45f2c10b2641bbc8a3fc0369f5524c279455aa5b6fa1f98d8241f1226&" alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409750025146429/5.png?ex=6653d9bd&is=6652883d&hm=208935fc9104bd96250655f1725a211bf9763e03bb6b9a1bbac4f4ed9e0a7647&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409750025146429/5.png?ex=66552b3d&is=6653d9bd&hm=d4bc2e914b4eba5f78647cb3fbaf4779e7aa1ab21d53eabee2632ddf10503fdd&" alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
           <h2><strong className="font-bold">JIAN WANG</strong> <span>PUZZLE EVENTS</span></h2>
             <p>
@@ -105,10 +105,10 @@ function Landing () {
             Outside of puzzles, i really like hanging with friends, listening to music (drop recs!), playing piano/trumpet/guitar, going to the arcade, playing board games and taking walks.
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409813036040243/6.png?ex=6653d9cc&is=6652884c&hm=eeaca3a5c86d704784cccf8e1ae4d25d699a99d37a1bba2dcf329c1235a26a04&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409813036040243/6.png?ex=66552b4c&is=6653d9cc&hm=04873a410e1ef0e0d1925a68203c19869792f2409bee879cbf866ef111ea664e&" alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409840735363112/7.png?ex=6653d9d2&is=66528852&hm=699127d9bac2ea4377c1d0638e3f6cfd3ff224f3de81c5464fb0f032efe20705&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409840735363112/7.png?ex=66552b52&is=6653d9d2&hm=60944858617d7ee08c12836fa99120ecb7a46e929feb0e80690d0704520e37d0&" alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
           <h2><strong className="font-bold">EMILY NING</strong> <span>DESIGN</span></h2>
             <p>
@@ -131,7 +131,7 @@ function Landing () {
             Follow us on socials 😃😃
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409875401277471/8.png?ex=6653d9db&is=6652885b&hm=696d3853e01c53fc1efcd438ba9c4f7c35ac619713ff49ab1507d3c2b10cbdea&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409875401277471/8.png?ex=66552b5b&is=6653d9db&hm=d17fa9585426e37a8a76e440050f1f052870684b7ec28ba2e4ad9a5dda81eac1&" alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
           <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204908898809815151/ck.png?ex=6654591b&is=6653079b&hm=8a816ab2afb76ecb587273c9b64df240bcbe1a76b6788037259c6727a6eff746&" alt="team member profile" />
