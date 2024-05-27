@@ -54,7 +54,7 @@ function Events () {
           <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">EVENTS</p>
           <h1 className="text-5xl text-white">WHAT'S NEXT?</h1>
         </div>
-        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-cyan-100 cursor-pointer animate-bounce" icon={faCircleChevronDown} size="2xl"/>
+        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-cyan-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
       </div>
 
       <div ref={scrollTarget}>
