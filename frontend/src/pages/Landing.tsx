@@ -1,4 +1,4 @@
-// import React from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 
 import NavigationBar from '../components/Navigation';
@@ -6,21 +6,30 @@ import Footer from '../components/Footer';
 import SectionHeader from '../components/SectionHeading';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons/faPuzzlePiece';
 
 function Landing () {
+  const scrollTarget = React.useRef<HTMLDivElement>(null);
+
+  const scroll = () => {
+    if (scrollTarget.current) {
+      scrollTarget.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <NavigationBar/>
-      <div className="flex flex-col justify-center self-stretch h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D')" }}>
+      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D')" }}>
         <div className="font-bold self-center">
           <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">WELCOME TO</p>
-          <img className="hidden hover:inline-block" src="logo.png" alt="logo"/>
           <h1 className="text-5xl text-white">UNSW PUZZLE SOCIETY</h1>
         </div>
+        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-cyan-100 cursor-pointer animate-bounce" icon={faCircleChevronDown} size="2xl"/>
       </div>
       <div className="flex flex-col items-center dark:text-slate-100 transition duration-200">
-        <div className="flex flex-col items-center p-2 font-raleway text-left">
+        <div ref={scrollTarget} className="flex flex-col items-center p-2 font-raleway text-left">
           <SectionHeader heading="ABOUT US"/>
           We are a hobby society for individuals with a passion for problem-solving!
           <ul>

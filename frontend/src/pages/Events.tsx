@@ -1,12 +1,11 @@
-// import React from 'react';
+import React from 'react';
 
 import NavigationBar from '../components/Navigation';
 import Footer from '../components/Footer';
 import SectionHeader from '../components/SectionHeading';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAnglesRight } from '@fortawesome/free-solid-svg-icons';
-import EventBanner from '../assets/EventBanner.png';
+import { faAnglesRight, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 function Events () {
   // const event = {
@@ -39,11 +38,28 @@ function Events () {
   events.push(socialSesh);
   events.push(event);
 
+  const scrollTarget = React.useRef<HTMLDivElement>(null);
+
+  const scroll = () => {
+    if (scrollTarget.current) {
+      scrollTarget.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <NavigationBar/>
-      <img className="mb-3 dark:brightness-90 transition duration-200" src={EventBanner}></img>
-      <SectionHeader heading="UPCOMING EVENTS"/>
+      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/314072869_1068596770468707_2945606359237085853_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=DtTh77Uk4m0Q7kNvgFeMbvl&_nc_ht=scontent.fsyd11-1.fna&oh=00_AYDexxmt2PKgLwAC45ySgFKqer3lM9cXcdvk_OtmVfmi6A&oe=665A38B3')" }}>
+        <div className="font-bold self-center">
+          <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">EVENTS</p>
+          <h1 className="text-5xl text-white">WHAT'S NEXT?</h1>
+        </div>
+        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-cyan-100 cursor-pointer animate-bounce" icon={faCircleChevronDown} size="2xl"/>
+      </div>
+
+      <div ref={scrollTarget}>
+        <SectionHeader heading="SCHEDULE"/>
+      </div>
       <div className="flex justify-center mt-5">
         <div className="flex flex-col w-4/5">
         {events.map((event, index) => (
@@ -53,11 +69,11 @@ function Events () {
               <h2 className="font-bold text-2xl pt-2">{event.title}</h2>
               <p className="overflow-y-auto mt-2">{event.description}</p>
               <br></br>
-              <div className="flex justify-between items-center">
-                <div className="hover:text-puzzleBlue-dark"><strong className="mr-3">DATE</strong>{event.date}</div>
-                <a className="flex justify-end items-baseline cursor-pointer underline-offset-4 decoration-1 decoration-puzzleBlue hover:underline" href={event.url} target="_blank">
+              <div className="flex justify-between items-center my-1">
+                <div className="hover:text-transparent hover:bg-gradient-to-r from-cyan-200 to-puzzleBlue hover:bg-clip-text"><strong>WHEN </strong>| {event.date}</div>
+                <a className="flex justify-end items-baseline cursor-pointer text-puzzleBlue-dark underline-offset-2 decoration-1 decoration-puzzleBlue-dark hover:underline" href={event.url} target="_blank">
                   <span className="mx-1">Find out more</span>
-                  <FontAwesomeIcon icon={faAnglesRight} size="xs"/>
+                  <FontAwesomeIcon className="text-puzzleBlue-dark" icon={faAnglesRight} size="xs"/>
                 </a>
               </div>
             </div>
