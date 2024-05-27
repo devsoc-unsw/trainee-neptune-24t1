@@ -63,7 +63,7 @@ function DisplayExample ({ solution, img }: { solution:string, img:string }) {
 
 function DisplayLeft ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 max-h-60 aspect-squaretransition duration-200 ">
+    <div className="flex flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 max-h-60 aspect-square transition duration-200 ">
       <img src={img} className="p-5"></img>
       <div className="place-self-center pr-8 text-right font-raleway text-lg">
         <p className="text-3xl pb-3"><b>{title}</b></p>
