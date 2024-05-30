@@ -54,11 +54,11 @@ function DisplayExample ({ solution, img }: { solution:string, img:string }) {
 
 function DisplayLeft ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 max-h-60 aspect-square transition duration-200 ">
+    <div className="flex flex-col sm:flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 sm:max-h-60 aspect-square transition duration-200 ">
       <img src={img} className="p-5"></img>
-      <div className="place-self-center pr-8 text-right font-raleway text-lg">
-        <p className="text-3xl pb-3"><b>{title}</b></p>
-        <p>{text}</p>
+      <div className="place-self-center p-1 sm:pr-8 sm:text-right font-raleway text-lg">
+        <p className="text-2xl"><b>{title}</b></p>
+        <p className="p-3 sm:p-0">{text}</p>
       </div>
     </div>
   )
@@ -66,10 +66,10 @@ function DisplayLeft ({ img, title, text }: { img:string, title:string, text:str
 
 function DisplayRight ({ img, title, text }: { img:string, title:string, text:string }) {
   return (
-    <div className="flex flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 max-h-60 aspect-square transition duration-200">
-      <div className="place-self-center pl-8 text-left font-raleway text-lg">
-        <p className="text-3xl pb-3"><b>{title}</b></p>
-        <p>{text}</p>
+    <div className="flex flex-col sm:flex-row m-3 bg-slate-100 dark:bg-slate-700 dark:text-slate-100 sm:max-h-60 aspect-square transition duration-200">
+      <div className="place-self-center p-1 sm:pl-8 sm:text-left font-raleway text-lg">
+        <p className="text-2xl mt-3 sm:m-0"><b>{title}</b></p>
+        <p className="p-3 sm:p-0">{text}</p>
       </div>
       <img src={img} className="p-5"></img>
     </div>
@@ -80,7 +80,7 @@ function Rebus() {
   return (
     <div className="flex flex-col items-center dark:text-slate-100 transition duration-200">
       <SectionHeader heading="REBUS" /> 
-      <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
+      <div className="flex flex-col sm:w-3/5 place-self-center font-raleway text-left text-xl p-5">
       <p>A rebus is a type of visual puzzle where words and images are used in abstract ways to represent an answer which are usually common phrases, idioms and can even be a single word. These puzzles typically target visual perception and creative thinking skills.</p>
         <p className="py-3">General components to look out for are:</p>
         <br></br>
@@ -127,12 +127,12 @@ function Logic () {
   return (
     <div className="flex flex-col items-center dark:text-slate-100 transition duration-200">
       <SectionHeader heading="LOGIC"/>
-      <div className="flex flex-col w-3/5 font-raleway text-left text-xl m-5">
+      <div className="flex flex-col sm:w-4/5 font-raleway text-left text-xl m-5">
         <p>Logic puzzles are grid puzzles like sudoku that come with a variety of different rules and styles. These aim to challenge deductive reasoning, comprehension and logic skills where you narrow different possibilities or aim to make the best choice out of many possibilities.</p>
       </div>
       <p className="text-3xl font-raleway mt-14"><b>Some Example Types:</b></p>
 
-      <div className="flex flex-col w-3/5 px-5 mt-5">
+      <div className="flex flex-col sm:w-4/5 px-5 mt-5">
         <DisplayLeft img={Minesweeper} title="Minesweeper" text="The goal of the game is to clear every non-landmine box and mark every landmine cell with a flag. A number tells you how many landmines there are in the surrounding 8 cells. One tip is to clear random cells at the beginning of the game."/>
         <DisplayRight img={Pipes} title="Pipes" text="The goal of the game is to make sure all pipes are connected and flow with water by rotating each pipe. A tip is to start with edge pieces that connect to three other pipes since you know that it must connect to three other pipes and there are only three other sides it can connect to."/>
         <DisplayLeft img={Nonogram} title="Nonogram" text="The goal of the game is to figure out which cells to fill in based on the numbers on the outside. A number tells you how many cells are filled in each row/column. A tip is to start on the row/column with the highest number and deduce which cell is filled throughout all possibilities."/>
@@ -168,7 +168,7 @@ function Cryptic () {
   return (
     <div className="flex flex-col dark:text-slate-100 transition duration-200">
       <SectionHeader heading="CRYPTIC"/>
-      <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
+      <div className="flex flex-col sm:w-3/5 place-self-center font-raleway text-left text-xl p-5">
         <p>A cryptic clue is similar to a riddle but contains 3 important parts: definition, cue and the leftovers. The definition is usually a word (or more) either at the start or the end of a clue. Cue words or phrases hint at what you should do with leftovers to obtain part of or the final answer. Cryptics target pattern recognition, critical thinking and comprehension skills.</p>
         <p className="py-3">Common cues used are:</p>
         <br></br>
@@ -207,7 +207,7 @@ function Minipuzz () {
   return (
     <div className="flex flex-col dark:text-slate-100 transition duration-200">
       <SectionHeader heading="MINIPUZZ"/>
-      <div className="flex flex-col w-3/5 place-self-center font-raleway text-left text-xl p-5">
+      <div className="flex flex-col sm:w-3/5 place-self-center font-raleway text-left text-xl p-5">
         <p>Minipuzzes, short for mini puzzles can be any type of puzzle not limited to just rebus, logics or cryptics. These can be a combination of many puzzles types or can be just one type. Minipuzzes can typically be broken into two sections: the initial solve and extraction.</p>
         <br></br>
         <p><b>Initial Solve:</b></p>
@@ -258,8 +258,8 @@ function Guides () {
 
       <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${banner})` }}>
         <div className="font-bold self-center">
-          <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">A GUIDE TO</p>
-          <h1 className="text-5xl text-white">REBUS, CRYPTIC & MINIPUZZ</h1>
+          <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-lg sm:text-3xl px-3 py-px my-2">A GUIDE TO</p>
+          <h1 className="text-2xl sm:text-5xl text-white">REBUS, CRYPTIC & MINIPUZZ</h1>
         </div>
         <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-gray-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
       </div>
