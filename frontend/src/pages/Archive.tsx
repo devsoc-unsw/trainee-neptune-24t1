@@ -148,13 +148,14 @@ function Archive () {
       <div className="flex justify-center">
         <YearDropdown years={years} toggleDropdown={toggleDropdown} year={year} setYear={setYear} setDropdown={setDropdown} dropdown={dropdown} dropdownRef={dropdownRef}/>
       </div>
-      {year === '2019' && <DisplayHunts hunts={hunts[2019]}/>}
-      {year === '2020' && <DisplayHunts hunts={hunts[2020]}/>}
-      {year === '2021' && <DisplayHunts hunts={hunts[2021]}/>}
-      {year === '2022' && <DisplayHunts hunts={hunts[2022]}/>}
-      {year === '2023' && <DisplayHunts hunts={hunts[2023]}/>}
-      {year === '2024' && <DisplayHunts hunts={hunts[2024]}/>}
-      <div className="mb-10"></div>
+      <div className="min-h-screen mb-5">
+        {year === '2019' && <DisplayHunts hunts={hunts[2019]}/>}
+        {year === '2020' && <DisplayHunts hunts={hunts[2020]}/>}
+        {year === '2021' && <DisplayHunts hunts={hunts[2021]}/>}
+        {year === '2022' && <DisplayHunts hunts={hunts[2022]}/>}
+        {year === '2023' && <DisplayHunts hunts={hunts[2023]}/>}
+        {year === '2024' && <DisplayHunts hunts={hunts[2024]}/>}
+      </div>
       <Footer/>
     </>
   );

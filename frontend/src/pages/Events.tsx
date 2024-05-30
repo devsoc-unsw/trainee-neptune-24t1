@@ -51,12 +51,12 @@ function Events () {
       </div>
         <div className="flex flex-col items-center w-full my-5">
         {events.map((event, index) => (
-          <div key={index} className="flex flex-row w-4/5 my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
-            <img className="max-w-96 min-h-56 aspect-video place-self-center rounded p-1" src={event.img} alt="banner"/>
-            <div className="max-h-56 flex flex-col text-left pl-5 pr-2 dark:text-slate-100 transition duration-200">
+          <div key={index} className="flex flex-row w-5/6 h-60 my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
+            <img className="max-w-96 h-full aspect-video place-self-center rounded-lg p-1" src={event.img} alt="banner"/>
+            <div className="min-h-full flex flex-col text-left pl-5 pr-2 dark:text-slate-100 transition duration-200">
               <h2 className="font-bold text-2xl pt-2">{event.title}</h2>
-              <p className="overflow-y-auto mt-2">{event.description}</p>
-              <br></br>
+              <p className="overflow-y-auto mt-1">{event.description}</p>
+              <br/>
               <div className="flex justify-between items-center my-1">
                 <div className="hover:text-transparent hover:bg-gradient-to-r from-cyan-200 to-puzzleBlue hover:bg-clip-text"><strong>WHEN </strong>| {event.date}</div>
                 <a className="flex justify-end items-baseline cursor-pointer text-puzzleBlue underline-offset-2 decoration-1 decoration-puzzleBlue hover:underline hover:text-puzzleBlue-dark hover:decoration-puzzleBlue-dark" href={event.url} target="_blank">
