@@ -38,7 +38,7 @@ function Landing () {
         </div>
         <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-gray-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
       </div>
-       <div className="flex flex-col items-center dark:text-slate-100 transition duration-200 p-2 mb-8">
+      <div className="flex flex-col items-center dark:text-slate-100 transition duration-200">
         <div ref={scrollTarget} className="flex flex-col items-center p-2 font-raleway text-left">
           <SectionHeader heading="ABOUT US"/>
           <p className="mt-1">We are a hobby society for individuals with a passion for problem-solving!</p>
@@ -171,7 +171,7 @@ function Landing () {
           </div>
         </div>
         <SectionHeader heading="OUR SPONSORS"/>
-        <div className="flex flex-row min-w-full justify-center items-center dark:bg-white dark:opacity-95 py-5 transition duration-200">
+        <div className="flex flex-row min-w-full justify-center items-center dark:bg-white dark:opacity-95 py-5 transition duration-200 mt-3">
           <a href="https://www.arc.unsw.edu.au/">
             <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://www.arc.unsw.edu.au/uploads/Arc%20Clubs%20Logo%202019-solid%20green.png" alt="arc logo" />
           </a>
