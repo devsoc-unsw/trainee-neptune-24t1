@@ -18,6 +18,8 @@ const socialSession = {
 function Events () {
   const events = [];
   events.push(socialSession);
+  events.push(socialSession);
+  events.push(socialSession);
 
   const scrollTarget = React.useRef<HTMLDivElement>(null);
   const scroll = () => {
@@ -40,10 +42,9 @@ function Events () {
       <div ref={scrollTarget}>
         <SectionHeader heading="SCHEDULE"/>
       </div>
-      <div className="flex justify-center mt-5">
-        <div className="flex flex-col w-4/5">
+        <div className="flex flex-col items-center w-full my-5">
         {events.map((event, index) => (
-          <div key={index} className="flex flex-row my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
+          <div key={index} className="flex flex-row w-4/5 my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
             <img className="max-w-96 min-h-56 aspect-video place-self-center rounded p-1" src={event.img} alt="banner"/>
             <div className="max-h-56 flex flex-col text-left pl-5 pr-2 dark:text-slate-100 transition duration-200">
               <h2 className="font-bold text-2xl pt-2">{event.title}</h2>
@@ -60,7 +61,6 @@ function Events () {
           </div>
         ))}
         </div>
-      </div>
       <Footer/>
     </>
   );
