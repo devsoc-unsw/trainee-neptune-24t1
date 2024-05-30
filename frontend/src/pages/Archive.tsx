@@ -6,6 +6,10 @@ import SectionHeader from '../components/SectionHeading';
 import YearDropdown from '../components/YearDropdown';
 import HuntFormat from '../components/HuntFormat'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
+import banner from '../assets/huntBanner.jpg';
+
 // 2019 Puzzle Hunts
 import Cosmos from '../assets/2019/Cosmos.jpg'
 
@@ -141,10 +145,28 @@ function Archive () {
     }
   });
 
+  const scrollTarget = React.useRef<HTMLDivElement>(null);
+  const scroll = () => {
+    if (scrollTarget.current) {
+      scrollTarget.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <NavigationBar/>
-      <SectionHeader heading="ARCHIVE"/>
+
+      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('../assets/huntBanner.png')]" style={{ backgroundImage: `url(${banner})` }}>
+        <div className="font-bold self-center">
+          <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">REVISIT</p>
+          <h1 className="text-5xl text-white">PUZZLE HUNTS</h1>
+        </div>
+        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-gray-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
+      </div>
+
+      <div ref={scrollTarget}>
+        <SectionHeader heading="ARCHIVE"/>
+      </div>
       <div className="flex justify-center">
         <YearDropdown years={years} toggleDropdown={toggleDropdown} year={year} setYear={setYear} setDropdown={setDropdown} dropdown={dropdown} dropdownRef={dropdownRef}/>
       </div>
