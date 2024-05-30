@@ -7,6 +7,8 @@ import SectionHeader from '../components/SectionHeading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
+
+
 function Events () {
   // const event = {
   //   banner:
@@ -71,9 +73,9 @@ function Events () {
               <br></br>
               <div className="flex justify-between items-center my-1">
                 <div className="hover:text-transparent hover:bg-gradient-to-r from-cyan-200 to-puzzleBlue hover:bg-clip-text"><strong>WHEN </strong>| {event.date}</div>
-                <a className="flex justify-end items-baseline cursor-pointer text-puzzleBlue-dark underline-offset-2 decoration-1 decoration-puzzleBlue-dark hover:underline" href={event.url} target="_blank">
+                <a className="flex justify-end items-baseline cursor-pointer text-puzzleBlue underline-offset-2 decoration-1 decoration-puzzleBlue hover:underline hover:text-puzzleBlue-dark hover:decoration-puzzleBlue-dark" href={event.url} target="_blank">
                   <span className="mx-1">Find out more</span>
-                  <FontAwesomeIcon className="text-puzzleBlue-dark" icon={faAnglesRight} size="xs"/>
+                  <FontAwesomeIcon className="text-puzzleBlue" icon={faAnglesRight} size="xs"/>
                 </a>
               </div>
             </div>
