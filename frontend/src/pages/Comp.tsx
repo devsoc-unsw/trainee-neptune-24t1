@@ -23,9 +23,9 @@ function Comp () {
       <NavigationBar/>
 
       <div className="mt-10">
-        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${day === 'M' ? 'bg-blue-100' : 'bg-gray-100 hover:bg-blue-100'}`} onClick={e => switchDay(e, 'M')}>Monday</button>
-        <button className={`border-x py-2 px-4 transition duration-300 ${day === 'W' ? 'bg-amber-100' : 'bg-gray-100 hover:bg-amber-100'}`} onClick={e => switchDay(e, 'W')}>Wednesday</button>
-        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${day === 'F' ? 'bg-pink-100' : 'bg-gray-100 hover:bg-pink-100'}`} onClick={e => switchDay(e, 'F')}>Friday</button>
+        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${day === 'M' ? 'bg-blue-50' : 'bg-gray-100 hover:bg-blue-100'}`} onClick={e => switchDay(e, 'M')}>Monday</button>
+        <button className={`border-x py-2 px-4 transition duration-300 ${day === 'W' ? 'bg-yellow-50' : 'bg-gray-100 hover:bg-yellow-100'}`} onClick={e => switchDay(e, 'W')}>Wednesday</button>
+        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${day === 'F' ? 'bg-pink-50' : 'bg-gray-100 hover:bg-pink-100'}`} onClick={e => switchDay(e, 'F')}>Friday</button>
       </div>
       {day === 'M' && <Monday/>}
       {day === 'W' && <Wednesday/>}
