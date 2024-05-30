@@ -1,20 +1,25 @@
-// import React from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-solid-svg-icons';
 
 function NavigationBar () {
+  const [darkMode, setMode] = React.useState(false);
+  
+  React.useEffect(() => {
+    const modePref = localStorage.getItem('darkMode') === 'true';
+    setMode(modePref);
+    document.documentElement.classList.add('transition', 'duration-200' , 'ease-in-out');
+    document.documentElement.classList.toggle('dark', modePref);
+    document.documentElement.classList.toggle('bg-gray-900', modePref);
+  }, [])
+
   const toggleDark = () => {
-    if (document.documentElement.classList.contains('dark')) {
-      document.documentElement.classList.remove('dark');
-      document.documentElement.classList.remove('bg-gray-900');
-    } else {
-      document.documentElement.classList.add('dark');
-      document.documentElement.classList.add('bg-gray-900');
-      if (!document.documentElement.classList.contains('transition')) {
-        document.documentElement.classList.add('transition', 'duration-200' , 'ease-in-out');
-      }
-    }
+    const newMode = !darkMode;
+    setMode(!darkMode);
+    localStorage.setItem('darkMode', newMode.toString());
+    document.documentElement.classList.toggle('dark', newMode);
+    document.documentElement.classList.toggle('bg-gray-900', newMode);
   }
 
   return (
