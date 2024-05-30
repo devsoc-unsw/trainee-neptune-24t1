@@ -9,6 +9,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 import { faPuzzlePiece } from '@fortawesome/free-solid-svg-icons/faPuzzlePiece';
 
+import tl from '../assets/team/tl.png';
+import al from '../assets/team/al.png';
+import ly from '../assets/team/ly.png';
+import jw from '../assets/team/jw.png';
+import jianw from '../assets/team/jianw.png';
+import tw from '../assets/team/tw.png';
+import en from '../assets/team/en.png';
+import py from '../assets/team/py.png';
+import ck from '../assets/team/ck.png';
+
 function Landing () {
   const scrollTarget = React.useRef<HTMLDivElement>(null);
 
@@ -21,7 +31,7 @@ function Landing () {
   return (
     <>
       <NavigationBar/>
-      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: "url('https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D')" }}>
+      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D')]">
         <div className="font-bold self-center">
           <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">WELCOME TO</p>
           <h1 className="text-5xl text-white">UNSW PUZZLE SOCIETY</h1>
@@ -41,7 +51,7 @@ function Landing () {
         </div>
         <SectionHeader heading="MEET THE TEAM"/>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182310778306570/1.png?ex=6654576b&is=665305eb&hm=2c7956353f06b188ab79d5f6d81b433077790f12adb6c6e5ba2ffa8d853ef044&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={tl} alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
             <h2><strong className="font-bold">TIMOTHY LEUNG</strong> <span>PRESIDENT</span></h2>
             <p>
@@ -63,10 +73,10 @@ function Landing () {
             My puzzle shows how I love food and where my next travel destination is, so if you solve it pls come with me. 🥺 
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182509978394624/2.png?ex=6654579b&is=6653061b&hm=6518ca98444fd90952989c1971870b847a6f8025af16800b9f5b2fb6e430dbb8&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={ly} alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204182520434790470/3.png?ex=6654579d&is=6653061d&hm=f9acafa2e98daabdbe27551ff2003f23ff738b4ca702db2eac275098d2389c45&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={al} alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
           <h2><strong className="font-bold">ALISON LIN</strong> <span>ARC DEL/TREASURER</span></h2>
             <p>
@@ -88,10 +98,10 @@ function Landing () {
             Over the past year I’ve gotten to like all kinds of puzzles but my favourites when I started were rebuses both because they were the only ones I could even remotely solve and because they are very satisfying when they click.
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409714494935060/4.png?ex=66552b34&is=6653d9b4&hm=40ca8fa45f2c10b2641bbc8a3fc0369f5524c279455aa5b6fa1f98d8241f1226&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={jw} alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409750025146429/5.png?ex=66552b3d&is=6653d9bd&hm=d4bc2e914b4eba5f78647cb3fbaf4779e7aa1ab21d53eabee2632ddf10503fdd&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={jianw} alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
           <h2><strong className="font-bold">JIAN WANG</strong> <span>PUZZLE EVENTS</span></h2>
             <p>
@@ -114,10 +124,10 @@ function Landing () {
             Outside of puzzles, i really like hanging with friends, listening to music (drop recs!), playing piano/trumpet/guitar, going to the arcade, playing board games and taking walks.
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409813036040243/6.png?ex=66552b4c&is=6653d9cc&hm=04873a410e1ef0e0d1925a68203c19869792f2409bee879cbf866ef111ea664e&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={tw} alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409840735363112/7.png?ex=66552b52&is=6653d9d2&hm=60944858617d7ee08c12836fa99120ecb7a46e929feb0e80690d0704520e37d0&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={en} alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
           <h2><strong className="font-bold">EMILY NING</strong> <span>DESIGN</span></h2>
             <p>
@@ -140,10 +150,10 @@ function Landing () {
             Follow us on socials 😃😃
             </p>
           </div>
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204409875401277471/8.png?ex=66552b5b&is=6653d9db&hm=d17fa9585426e37a8a76e440050f1f052870684b7ec28ba2e4ad9a5dda81eac1&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={py} alt="team member profile" />
         </div>
         <div className="flex flex-row m-4 font-raleway">
-          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src="https://cdn.discordapp.com/attachments/1204182270009675836/1204908898809815151/ck.png?ex=6654591b&is=6653079b&hm=8a816ab2afb76ecb587273c9b64df240bcbe1a76b6788037259c6727a6eff746&" alt="team member profile" />
+          <img className="max-h-52 rounded drop-shadow duration-100 hover:scale-105" src={ck} alt="team member profile" />
           <div className="max-h-52 max-w-2xl text-left leading-relaxed mx-6 overflow-scroll">
           <h2><strong className="font-bold">CK</strong> <span>MASCOT</span></h2>
             <p>
@@ -158,7 +168,7 @@ function Landing () {
           </div>
         </div>
         <SectionHeader heading="OUR SPONSORS"/>
-        <div className="flex flex-row min-w-full justify-center items-center mt-5 dark:bg-white dark:opacity-80 py-5 transition duration-200">
+        <div className="flex flex-row min-w-full justify-center items-center mt-5 dark:bg-white dark:opacity-95 py-5 transition duration-200">
           <a href="https://www.arc.unsw.edu.au/">
             <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://www.arc.unsw.edu.au/uploads/Arc%20Clubs%20Logo%202019-solid%20green.png" alt="arc logo" />
           </a>
