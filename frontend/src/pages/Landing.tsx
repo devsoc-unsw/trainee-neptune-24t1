@@ -168,7 +168,7 @@ function Landing () {
           </div>
         </div>
         <SectionHeader heading="OUR SPONSORS"/>
-        <div className="flex flex-row min-w-full justify-center items-center mt-5 dark:bg-white dark:opacity-95 py-5 transition duration-200">
+        <div className="flex flex-row min-w-full justify-center items-center dark:bg-white dark:opacity-95 py-5 transition duration-200">
           <a href="https://www.arc.unsw.edu.au/">
             <img className="max-h-16 mx-7 transition duration:100 hover:scale-105" src="https://www.arc.unsw.edu.au/uploads/Arc%20Clubs%20Logo%202019-solid%20green.png" alt="arc logo" />
           </a>
