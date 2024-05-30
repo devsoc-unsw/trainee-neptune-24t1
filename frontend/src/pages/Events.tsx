@@ -15,11 +15,18 @@ const socialSession = {
   date: 'Every Monday'
 }
 
+const puzzledPint = {
+  img: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/436211022_429080136498879_2336429469247562648_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ugUUAq4O4nQQ7kNvgFOgCSc&_nc_ht=scontent.fsyd11-1.fna&oh=00_AYBeSopUEYxSAAZUFoFs2z9Gb4NpyREFnA0N_HGPCXCIVw&oe=665E55FD',
+  title: 'Puzzled Pint',
+  description: 'Puzzled Pint is a non-competitive and social puzzle-solving event! Surround yourself in a cosy atmosphere while working on themed puzzles, and maybe even mingle with puzzlers from other unis, like USYD Puzzlesoc and UTS PuzzleSoc~~ This month\'s theme is 📚🎮 Bart Simpson 🛹❗ 🔗 Visit http://www.puzzledpint.com/ for more information and the location puzzle—the answer reveals the location!',
+  url: 'https://fb.me/e/4sz0L1vr9',
+  date: 'Second Tuesday Every Month'
+}
+
 function Events () {
   const events = [];
   events.push(socialSession);
-  events.push(socialSession);
-  events.push(socialSession);
+  events.push(puzzledPint);
 
   const scrollTarget = React.useRef<HTMLDivElement>(null);
   const scroll = () => {
