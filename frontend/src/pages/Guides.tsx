@@ -4,6 +4,11 @@ import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
 
+import banner from '../assets/socialSession.jpg';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
+
 import Aquarium from '../assets/Logics/Aquarium.png'
 import Hashi from '../assets/Logics/Hashi.png'
 import Minesweeper from '../assets/Logics/Minesweeper.png'
@@ -37,11 +42,11 @@ function DisplayExample ({ solution, img }: { solution:string, img:string }) {
   return (
     <div className="flex flex-col dark:text-slate-100 transition duration-200">
       <div ref={imageRef} className={`${large ? 'z-10' : 'z-0'}`}>
-      <img onClick={toggleSize} className={`dark:brightness-90 transition duration-200 cursor-pointer ${large ? 'scale-150 border border-slate-900 transition duration-300 ease-in-out' : 'scale-100 transition duration-300 ease-in-out'}`} src={`${img}`}></img>
+      <img onClick={toggleSize} className={`dark:brightness-90 transition duration-200 cursor-pointer rounded ${large ? 'scale-150 border border-slate-900 transition duration-300 ease-in-out' : 'scale-100 transition duration-300 ease-in-out'}`} src={`${img}`}></img>
       </div>
-      <details className="mt-3 bg-gray-200 dark:bg-slate-700 transition duration-200 py-3 px-5">
-        <summary className="hover:cursor-pointer">Show solution</summary>
-        <p className="ml-5 mr-3 my-1 overflow-y-auto max-h-36"><i>{solution}</i></p>
+      <details className="my-3 bg-gray-100 hover:bg-transparent hover:ring-1 ring-puzzleBlue-light  dark:bg-slate-700 rounded transition duration-200 py-3 px-3">
+        <summary className="cursor-pointer">Show solution</summary>
+        <p className="border-t mx-3 my-1 py-1 overflow-y-auto max-h-36"><i>{solution}</i></p>
       </details>
     </div>
   )
@@ -240,10 +245,26 @@ function Guides () {
     setPuzzleType(type);
   };
 
+  const scrollTarget = React.useRef<HTMLDivElement>(null);
+  const scroll = () => {
+    if (scrollTarget.current) {
+      scrollTarget.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
       <NavigationBar/>
-      <div className="mt-10">
+
+      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${banner})` }}>
+        <div className="font-bold self-center">
+          <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-3xl px-3 py-px my-2">A GUIDE TO</p>
+          <h1 className="text-5xl text-white">REBUS, CRYPTIC & MINIPUZZ</h1>
+        </div>
+        <FontAwesomeIcon onClick={scroll} className="w-max relative top-1/3 left-1/2 text-white hover:text-gray-100 cursor-pointer drop-shadow animate-bounce" icon={faCircleChevronDown} size="2xl"/>
+      </div>
+
+      <div ref={scrollTarget} className="mt-20">
         <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${puzzleType === 'rebus' ? 'bg-blue-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'rebus')}>Rebus</button>
         <button className={`border-x py-2 px-4 transition duration-300 ${puzzleType === 'logic' ? 'bg-blue-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'logic')}>Logic</button>
         <button className={`border-r py-2 px-4 transition duration-300 ${puzzleType === 'cryptic' ? 'bg-yellow-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-yellow-100'}`} onClick={e => switchGuide(e, 'cryptic')}>Cryptic</button>

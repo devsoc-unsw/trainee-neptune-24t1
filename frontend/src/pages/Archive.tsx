@@ -167,9 +167,7 @@ function Archive () {
       <div ref={scrollTarget}>
         <SectionHeader heading="ARCHIVE"/>
       </div>
-      <div className="flex justify-center">
-        <YearDropdown years={years} toggleDropdown={toggleDropdown} year={year} setYear={setYear} setDropdown={setDropdown} dropdown={dropdown} dropdownRef={dropdownRef}/>
-      </div>
+      <YearDropdown years={years} toggleDropdown={toggleDropdown} year={year} setYear={setYear} setDropdown={setDropdown} dropdown={dropdown} dropdownRef={dropdownRef}/>
       <div className="min-h-screen mb-5">
         {year === '2019' && <DisplayHunts hunts={hunts[2019]}/>}
         {year === '2020' && <DisplayHunts hunts={hunts[2020]}/>}
