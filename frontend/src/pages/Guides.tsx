@@ -244,10 +244,10 @@ function Guides () {
     <>
       <NavigationBar/>
       <div className="mt-10">
-        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${puzzleType === 'rebus' ? 'bg-blue-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'rebus')}>Rebus</button>
-        <button className={`border-x py-2 px-4 transition duration-300 ${puzzleType === 'logic' ? 'bg-blue-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'logic')}>Logic</button>
-        <button className={`border-r py-2 px-4 transition duration-300 ${puzzleType === 'cryptic' ? 'bg-amber-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-amber-100'}`} onClick={e => switchGuide(e, 'cryptic')}>Cryptic</button>
-        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${puzzleType === 'minipuzz' ? 'bg-pink-100' : 'bg-gray-100 dark:bg-gray-300 hover:bg-pink-100'}`} onClick={e => switchGuide(e, 'minipuzz')}>Minipuzz</button>
+        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${puzzleType === 'rebus' ? 'bg-blue-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'rebus')}>Rebus</button>
+        <button className={`border-x py-2 px-4 transition duration-300 ${puzzleType === 'logic' ? 'bg-blue-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-blue-100'}`} onClick={e => switchGuide(e, 'logic')}>Logic</button>
+        <button className={`border-r py-2 px-4 transition duration-300 ${puzzleType === 'cryptic' ? 'bg-yellow-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-yellow-100'}`} onClick={e => switchGuide(e, 'cryptic')}>Cryptic</button>
+        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${puzzleType === 'minipuzz' ? 'bg-pink-50' : 'bg-gray-100 dark:bg-gray-300 hover:bg-pink-100'}`} onClick={e => switchGuide(e, 'minipuzz')}>Minipuzz</button>
       </div>
       {puzzleType === 'rebus' && <Rebus/>}
       {puzzleType === 'logic' && <Logic/>}
