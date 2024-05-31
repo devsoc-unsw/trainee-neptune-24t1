@@ -40,11 +40,15 @@ function Comp () {
       {day === 'M' && <Monday day={day} setNames={setNames}/>}
       {day === 'W' && <Wednesday day={day} setNames={setNames}/>}
       {day === 'F' && <Friday day={day} setNames={setNames}/>}
-      <ul className="text-white">
-        {names.map((name, index) => (
-          <li key={index}>{name}</li>
-        ))}
-      </ul>
+
+      <div className="flex justify-center mt-8">
+        <br></br>
+        <div className="flex flex-col dark:text-slate-100 text-slate-900 mb-20 w-2/5 dark:ring-slate-300 ring-2 ring-puzzleBlue dark:bg-slate-700 bg-cyan-50 rounded-lg overflow-y-scroll">
+          {names.map((name, index) => (
+            <p key={index} className=" pl-10 py-2 w-full place-self-center text-left ring-1 ring-white dark:ring-slate-300">{index + 1} {name}</p>
+          ))}
+        </div>
+      </div>
       <Footer/>
     </>
   );
@@ -138,13 +142,10 @@ const Form: React.FC<Puzzle & { day: string; setNames: (names: string[]) => void
         },
         body: JSON.stringify({ name, userAnswer, day, time}),
       });
-  
-      const result = await response.json();
 
       if (response.ok) {
         fetchLeaderboard(day, setNames);
       }
-      alert(result.message);
     } catch (error) {
       console.error('Error submitting form:', error);
     }
