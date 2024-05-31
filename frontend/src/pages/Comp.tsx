@@ -107,14 +107,12 @@ const Form: React.FC<Puzzle & { day: string }> = ({ title, img, answer, day }) =
         body: JSON.stringify({ name, userAnswer, day}),
       });
 
-      console.log(response);
       const result = await response.json();
   
       if (response.ok) {
         console.log('Submission received');
-      } else {
-        alert(result.message);
       }
+      alert(result.message);
     } catch (error) {
       console.error('Error submitting form:', error);
     }    
