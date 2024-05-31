@@ -31,7 +31,7 @@ function Landing () {
   return (
     <>
       <NavigationBar/>
-      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('https://scontent.fsyd11-2.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=unn81l6X1NIQ7kNvgF6pi3c&_nc_ht=scontent.fsyd11-2.fna&oh=00_AYDuq0dBtma8o3UXm2AKaqOVl65-OQrqBY3DM5MCA6LrnA&oe=66591E0D')]">
+      <div className="flex flex-col justify-center h-screen bg-fixed bg-cover bg-center bg-no-repeat bg-[url('https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/314598558_1068595980468786_6460879911079566694_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=dwKge21CJ1EQ7kNvgE9CW4l&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYC71Umyp9agKyo9OvjjAyxhQrflAvLZ1hdCWqFFa0knwg&oe=665F0CCD')]">
         <div className="font-bold self-center">
           <p className="bg-gradient-to-r from-cyan-100 to-puzzleBlue-light w-max text-2xl sm:text-3xl px-3 py-px my-2">WELCOME TO</p>
           <h1 className="text-3xl sm:text-5xl text-white">UNSW PUZZLE SOCIETY</h1>

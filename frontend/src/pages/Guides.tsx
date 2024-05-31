@@ -146,15 +146,15 @@ function Logic () {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-4/5 p-5 mt-8 gap-8 place-self-center text-left">
           <DisplayExample
             solution="The rules for this logic puzzle is simple, we must only traverse either horizontally or vertically in a consecutive path from number 1 to 81. Since we don't have definitive information about where 1 should be, we can start with 2 and come back to 1 later. Notice the only way to get from 3 to 5 is to place a 4 below the 5. Then to get from 5 to 8, we must go above 5 to 6 then left to 7 and left to 8. We continue this path of thinking until we reach 81 then we trace from the green arrow and collect all the numbers, indexing them with the alphabet and wrapping around to yield an answer."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/428608918_380247801382113_37063456505260312_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=FF3VP1T8FvoQ7kNvgHY0qZl&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYBkLjavJdlVjDkEBwqSAtCfxHQDbxEWvcwZraRZnSIeKw&oe=66590F1A"
+            img="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/428608918_380247801382113_37063456505260312_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=-QaPYG20QjYQ7kNvgGQ64nG&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYCfih1jwDSzM0JGi4HCs0YTDXSUX3SM4WaodlF3-Ojtzg&oe=665F361A"
           />
           <DisplayExample
             solution="TBA"
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/430915764_388165153923711_8890790327536728054_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=yi_9eLA4E7kQ7kNvgEcR6gg&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYBHeGCB9IEHEPCxAKGxjGYa41RK94DGYfAnARv1LxLgug&oe=6658FBF3"
+            img="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/430915764_388165153923711_8890790327536728054_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Bh7wUKOcwEcQ7kNvgEvUKHy&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYBICMh7ZC__ggjALZfIJgY0xTnosvU1lGA6R16atgDQhg&oe=665F22F3"
           />
           <DisplayExample
             solution="TBA"
-            img="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/437929596_412043868202506_9018495140568725692_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=2XoRgJ2EluIQ7kNvgHyG_5M&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYA-jMbZPe_Im-OC-x7LI5r--Hl9sbyC6GbyjPZPt9OAkQ&oe=66590570"
+            img="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/437929596_412043868202506_9018495140568725692_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_ohc=VFVqUAd_76oQ7kNvgE4HZRw&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYDlkIdG3rYpMW6gDGdcsnPuosdXkBrcVKm9_ei86QFuog&oe=665F2C70"
           />
         </div>
       </div>
@@ -221,15 +221,15 @@ function Minipuzz () {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-8 gap-16 place-self-center text-left">
           <DisplayExample
             solution="You might notice some of these words actually come from phrases with the first word missing. These phrases are 'one small step for man', 'two can play at that game', 'three strikes and you're out' and 'four horsemen of the apocalypse'. Next we draw four lines linking the boxes in order of the numbers in the phrases respectively. This will make out the answer 'spin'."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/430982886_387069637366596_8701555422166210618_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=5KHb75JggNoQ7kNvgGKLoII&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYB2EEerw4HYhbJfocMmWYbwjiMvgkgne407M6O48TEVIw&oe=66591DE4"
+            img="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/430982886_387069637366596_8701555422166210618_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=t7mKISNqM2cQ7kNvgHkmy9x&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYAnvE-a_5GwOJbXAnfgf7Cbn3t-NTDlsldwB8PIFjmv7A&oe=665F0CA4"
           />
           <DisplayExample
-            solution="The phrases'back to front' and 'same message' hint at finding palindromes for each line. Ewe, SOS, ere, madam, APA, solos, gag, kayak. Taking the 'unique' letters we get the answer 'wordplay'."
-            img="https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/431035450_390285660378327_7298229047443792686_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=xjCCBUjCBPYQ7kNvgEmY0Bm&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYArBSQ3FZVOyM2EVkeQ2OFoAsy1yx0C9NyvDoQH2OS7pQ&oe=66591316"
+            solution="The phrases 'back to front' and 'same message' hint at finding palindromes for each line. Ewe, SOS, ere, madam, APA, solos, gag, kayak. Taking the 'unique' letters we get the answer 'wordplay'."
+            img="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/431035450_390285660378327_7298229047443792686_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=17TkfIFotPwQ7kNvgGOMs91&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYBs_Tm8txkzNf26O5OROiF_HLRR_dU2XrPBLGT88DYsJQ&oe=665F3A16"
           />
           <DisplayExample
             solution="The first box points from s + quill + a + bull - qu which gives us 'syllable', hinting at converting the words into syllable counts. Next we have a rebus for 'letter' where we convert our syllable counts into letters. Then the 'alphabet mirror' rebus tells us to 'mirror' the letters we have across the middle of the alphabet. Finally, there is an image of what looks like a wheel turning forward with a 5 above it. This cues at shifting the letters forward by 5. We then have an arrow facing up, suggesting we read the letters from bottom to top to yield us an answer of 'decay'."
-            img="https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/437859738_414349177971975_2146388222790218514_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=nQCjuaa-1SgQ7kNvgFDFO3Z&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYAQtJvH3RDtUIFc8Ncz_VFqTiVKXev1Tnl-9VcyRMPl5Q&oe=66590782"
+            img="https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/437859738_414349177971975_2146388222790218514_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=yR9NtRritm0Q7kNvgHEcXyS&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYAJYoZMA_BQUawfL9xSBLrirN8LkSog4TWFpXV2kjyqPQ&oe=665F2E82"
           />
         </div>
       </div>

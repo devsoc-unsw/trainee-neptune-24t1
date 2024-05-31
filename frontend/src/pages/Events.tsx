@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAnglesRight, faCircleChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const socialSession = {
-  img: 'https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/444502067_435924732481086_7098541123001912659_n.jpg?stp=cp6_dst-jpg&_nc_cat=109&ccb=1-7&_nc_sid=5f2048&_nc_ohc=fkFdtO6mjpcQ7kNvgGcwLeb&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYBveWL3D1mU5rlSwsEdvunQyom81R6SETjtzIqgCgC96A&oe=6658E04B',
+  img: 'https://scontent.fcbr1-1.fna.fbcdn.net/v/t39.30808-6/437936325_412031738203719_3381233125359551868_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=5f2048&_nc_ohc=M7HcTDhpjVYQ7kNvgEonnPr&_nc_ht=scontent.fcbr1-1.fna&oh=00_AYC6eEKeYVypwOvY0xTTQJtsCR2j1n9TVkcFkg8Nxcu9EA&oe=665F2D73',
   title: 'Weekly Social Sessions',
   description: 'Gather O everyone, for our beloved weekly social sessions hath withstood the fortitude of time⏳and hath henceforth revived!! 🙌 𝐓𝐇𝐄 𝐖𝐄𝐄𝐊𝐋𝐘 𝐒𝐎𝐂𝐈𝐀𝐋 𝐒𝐄𝐒𝐒𝐈𝐎𝐍 𝐈𝐒: An engagement participated by a multitude of kindred spirits 👻 whom doth revel in fellowship at the table, battling the cunning scrolls of Puzzle 📜. Puzzlers from far and wide convene to discourse various topics, engage mirthfully in board games 🎲, relish in delectable provisions 🍭, and unriddle secret ciphers. Bring thy fellow companions hither and test thy wits!🔎 To be informed of future social sessions, get the @social sessioner role in ⁠#rules-and-roles on the Discord server!',
   url: 'https://www.facebook.com/events/1426532081562135/',
