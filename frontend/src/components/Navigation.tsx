@@ -24,23 +24,23 @@ function NavigationBar () {
 
   return (
     <>
-      <nav className="z-20 sticky top-0 bg-puzzleBlue transition duration-200 opacity-90 hover:opacity-100 m-0 min-w-full h-14 flex justify-evenly items-center font-raleway text-white">
+      <nav className="z-20 sticky top-0 bg-puzzleBlue transition duration-200 opacity-90 hover:opacity-100 m-0 min-w-full h-14 px-2 flex justify-evenly items-center font-raleway text-white">
         <div>
           <Link to="/">
-            <img src="logo.png" alt="logo" className="max-w-12 max-h-12 transition duration-200 contrast-125 brightness-100 hover:brightness-95"/>
+            <img src="logo.png" alt="logo" className="w-8 h-8 sm:w-12 sm:h-12 transition duration-200 contrast-125 brightness-100 hover:brightness-95"/>
           </Link>
         </div>
         <div>
-          <Link to="/events" className="transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3">UPCOMING EVENTS</Link>
+          <Link to="/events" className="text-xs sm:text-base transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3"><span className="hidden sm:inline-block">UPCOMING&nbsp;</span>EVENTS</Link>
         </div>
         <div>
-          <Link to="/guides" className="transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3">PUZZLE GUIDES</Link>
+          <Link to="/guides" className="text-xs sm:text-base transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3"><span className="hidden sm:inline-block">PUZZLE&nbsp;</span>GUIDES</Link>
         </div>
         <div>
-          <Link to="/archive" className="transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3">HUNT ARCHIVE</Link>
+          <Link to="/archive" className="text-xs sm:text-base transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3"><span className="hidden sm:inline-block">HUNT&nbsp;</span>ARCHIVE</Link>
         </div>
         <div>
-          <Link to="/comp" className="transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3">WEEKLY COMP</Link>
+          <Link to="/comp" className="text-xs sm:text-base transition duration-300 bg-inherit hover:bg-puzzleBlue-dark p-3"><span className="hidden sm:inline-block">WEEKLY&nbsp;</span>COMP</Link>
         </div>
         <FontAwesomeIcon onClick={toggleDark} className="transition duration-700 bg-inherit hover:bg-puzzleBlue-dark p-3 hover:cursor-pointer" icon={faMoon} size="lg"/>
       </nav>

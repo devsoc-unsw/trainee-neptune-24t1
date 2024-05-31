@@ -19,6 +19,7 @@ const YearDropdown: React.FC<DropdownProps> = ({ years, toggleDropdown, year, se
   };
 
   return (
+    <div className="flex justify-center">
     <div className="relative flex-col mt-2 dark:text-white transition duration-200" ref={dropdownRef}>
       <button className="flex text-2xl font-bold items-center font-sans rounded px-3 py-1 transition duration-200 hover:bg-gray-100 dark:hover:bg-zinc-800" onClick={toggleDropdown}>
         <span>{year}</span>
@@ -31,6 +32,7 @@ const YearDropdown: React.FC<DropdownProps> = ({ years, toggleDropdown, year, se
         ))}
         </div>
       )}
+    </div>
     </div>
   );
 }

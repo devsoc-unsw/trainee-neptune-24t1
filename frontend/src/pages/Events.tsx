@@ -15,11 +15,18 @@ const socialSession = {
   date: 'Every Monday'
 }
 
+const puzzledPint = {
+  img: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/436211022_429080136498879_2336429469247562648_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=ugUUAq4O4nQQ7kNvgFOgCSc&_nc_ht=scontent.fsyd11-1.fna&oh=00_AYBeSopUEYxSAAZUFoFs2z9Gb4NpyREFnA0N_HGPCXCIVw&oe=665E55FD',
+  title: 'Puzzled Pint',
+  description: 'Puzzled Pint is a non-competitive and social puzzle-solving event! Surround yourself in a cosy atmosphere while working on themed puzzles, and maybe even mingle with puzzlers from other unis, like USYD Puzzlesoc and UTS PuzzleSoc~~ This month\'s theme is 📚🎮 Bart Simpson 🛹❗ 🔗 Visit http://www.puzzledpint.com/ for more information and the location puzzle—the answer reveals the location!',
+  url: 'https://fb.me/e/4sz0L1vr9',
+  date: 'Second Tuesday Every Month'
+}
+
 function Events () {
   const events = [];
   events.push(socialSession);
-  events.push(socialSession);
-  events.push(socialSession);
+  events.push(puzzledPint);
 
   const scrollTarget = React.useRef<HTMLDivElement>(null);
   const scroll = () => {
@@ -44,14 +51,14 @@ function Events () {
       </div>
         <div className="flex flex-col items-center w-full my-5">
         {events.map((event, index) => (
-          <div key={index} className="flex flex-row w-4/5 my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
-            <img className="max-w-96 min-h-56 aspect-video place-self-center rounded p-1" src={event.img} alt="banner"/>
-            <div className="max-h-56 flex flex-col text-left pl-5 pr-2 dark:text-slate-100 transition duration-200">
+          <div key={index} className="flex flex-col sm:flex-row w-5/6 sm:h-60 my-2 p-2 bg-gray-100 dark:bg-slate-700 rounded-lg font-raleway transition duration-200">
+            <img className="sm:max-w-96 h-full aspect-video place-self-center rounded-lg p-1" src={event.img} alt="banner"/>
+            <div className="min-h-full flex flex-col text-left px-2 sm:px-3 dark:text-slate-100 transition duration-200">
               <h2 className="font-bold text-2xl pt-2">{event.title}</h2>
-              <p className="overflow-y-auto mt-2">{event.description}</p>
-              <br></br>
+              <p className="overflow-y-auto mt-1">{event.description}</p>
+              <br/>
               <div className="flex justify-between items-center my-1">
-                <div className="hover:text-transparent hover:bg-gradient-to-r from-cyan-200 to-puzzleBlue hover:bg-clip-text"><strong>WHEN </strong>| {event.date}</div>
+                <div className="hidden sm:inline-block hover:text-transparent hover:bg-gradient-to-r from-cyan-200 to-puzzleBlue hover:bg-clip-text"><strong>WHEN </strong>| {event.date}</div>
                 <a className="flex justify-end items-baseline cursor-pointer text-puzzleBlue underline-offset-2 decoration-1 decoration-puzzleBlue hover:underline hover:text-puzzleBlue-dark hover:decoration-puzzleBlue-dark" href={event.url} target="_blank">
                   <span className="mx-1">Find out more</span>
                   <FontAwesomeIcon className="text-puzzleBlue" icon={faAnglesRight} size="xs"/>

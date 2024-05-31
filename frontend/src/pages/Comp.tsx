@@ -24,9 +24,9 @@ function Comp () {
       <NavigationBar/>
 
       <div className="mt-10">
-        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${day === 'M' ? 'bg-blue-100' : 'bg-gray-100 hover:bg-blue-100'}`} onClick={e => switchDay(e, 'M')}>Monday</button>
-        <button className={`border-x py-2 px-4 transition duration-300 ${day === 'W' ? 'bg-amber-100' : 'bg-gray-100 hover:bg-amber-100'}`} onClick={e => switchDay(e, 'W')}>Wednesday</button>
-        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${day === 'F' ? 'bg-pink-100' : 'bg-gray-100 hover:bg-pink-100'}`} onClick={e => switchDay(e, 'F')}>Friday</button>
+        <button className={`rounded-l-lg py-2 px-4 transition duration-300 ${day === 'M' ? 'bg-blue-50' : 'bg-gray-100 hover:bg-blue-100'}`} onClick={e => switchDay(e, 'M')}>Monday</button>
+        <button className={`border-x py-2 px-4 transition duration-300 ${day === 'W' ? 'bg-yellow-50' : 'bg-gray-100 hover:bg-yellow-100'}`} onClick={e => switchDay(e, 'W')}>Wednesday</button>
+        <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${day === 'F' ? 'bg-pink-50' : 'bg-gray-100 hover:bg-pink-100'}`} onClick={e => switchDay(e, 'F')}>Friday</button>
       </div>
       {day === 'M' && <Monday day={day}/>}
       {day === 'W' && <Wednesday day={day}/>}
@@ -129,7 +129,7 @@ const Form: React.FC<Puzzle & { day: string }> = ({ title, img, answer, day }) =
   return (
     <div className="flex flex-col justify-center dark:text-slate-100 transition duration-200">
       <SectionHeader heading={title}/>
-      <div className="flex flex-row justify-center p-10">
+      <div className="flex flex-col sm:flex-row justify-center p-4 sm:p-10">
         <img className="h-80 mx-5 rounded drop-shadow duration-100 hover:scale-105" src={img} alt="banner"/>
         <div className="flex flex-col justify-between text-left mx-5 font-raleway">
           <form className="flex flex-col text-left" onSubmit={submit}>
