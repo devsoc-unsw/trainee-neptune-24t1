@@ -1,8 +1,9 @@
 import React from 'react';
-
 import Footer from '../components/Footer';
 import NavigationBar from '../components/Navigation';
 import SectionHeader from '../components/SectionHeading';
+
+const SERVER_URL = "http://localhost:5005"
 
 interface Puzzle {
   title: string,
@@ -27,58 +28,96 @@ function Comp () {
         <button className={`border-x py-2 px-4 transition duration-300 ${day === 'W' ? 'bg-amber-100' : 'bg-gray-100 hover:bg-amber-100'}`} onClick={e => switchDay(e, 'W')}>Wednesday</button>
         <button className={`rounded-r-lg py-2 px-4 transition duration-300 ${day === 'F' ? 'bg-pink-100' : 'bg-gray-100 hover:bg-pink-100'}`} onClick={e => switchDay(e, 'F')}>Friday</button>
       </div>
-      {day === 'M' && <Monday/>}
-      {day === 'W' && <Wednesday/>}
-      {day === 'F' && <Friday/>}
+      {day === 'M' && <Monday day={day}/>}
+      {day === 'W' && <Wednesday day={day}/>}
+      {day === 'F' && <Friday day={day}/>}
       <Footer/>
     </>
   );
 }
 
 // most recent Monday puzzle
-function Monday () {
+function Monday ({day} : {day: string}) {
 
-  const examplePuzzle = {
+  const example = {
     title: 't2_w1',
-    img: 'https://scontent.fsyd11-1.fna.fbcdn.net/v/t39.30808-6/435065715_407911401949086_8469336516791600997_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QDj4tdKIGZQQ7kNvgF_9ELZ&_nc_ht=scontent.fsyd11-1.fna&oh=00_AYBkmEj01S0jeIe_ekCGtwADkEJGhEV_w6UJgBcTLuceVg&oe=66575C5A',
-    answer: 'bonding'
+    img: 'https://scontent.fsyd3-1.fna.fbcdn.net/v/t39.30808-6/441944574_437182145688678_9031183862831818359_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_ohc=Wsyh5UH7WYMQ7kNvgG8o3G-&_nc_ht=scontent.fsyd3-1.fna&oh=00_AYB8GGLHuneV46WuaFuf-VpP71Uid4_u64GW1Z2Nr7DJ1w&oe=665EFFB3',
+    answer: 'excellency'
   }
 
   return (
-    <Form {...examplePuzzle} />
+    <Form {...example} day={day} />
   )
 }
 
 // most recent Wednesday puzzle
-function Wednesday () {
+function Wednesday ({day} : {day: string}) {
+  const exampleCryptic = {
+    title: 't2_w1',
+    img: 'https://scontent.fsyd3-2.fna.fbcdn.net/v/t39.30808-6/442412072_437187545688138_6803202672391744398_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=5f2048&_nc_ohc=cSVx259SNWwQ7kNvgFhSr7p&_nc_ht=scontent.fsyd3-2.fna&oh=00_AYCrrLJDOz-F6pz8dNVslPjR1jwojNda0bcom8R5xd3lqQ&oe=665ED822',
+    answer: 'cross'
+  }
+
   return (
-    <></>
+    <Form {...exampleCryptic} day={day} />
   )
 }
 
 // most recent Friday puzzle
-function Friday () {
+function Friday ({day} : {day: string}) {
+  const exampleMinipuzz = {
+    title: '',
+    img: '',
+    answer: ''
+  }
+
   return (
-    <></>
+    <Form {...exampleMinipuzz} day={day} />
   )
 }
 
-const Form: React.FC<Puzzle> = ({ title, img, answer }) => {
+
+const Form: React.FC<Puzzle & { day: string }> = ({ title, img, answer, day }) => {
   const [name, setName] = React.useState('');
   const [userAnswer, setUserAnswer] = React.useState('');
 
-  const submit = (event: React.SyntheticEvent) => {
+  const submit = async (event: React.SyntheticEvent) => {
     event.preventDefault();
+    if (answer === '') {
+      alert('Puzzle TBA');
+      return;
+    }
     if (!name) {
       // temporary
-      alert('please enter a name');
+      alert('Please enter a name');
       return;
     }
-    if (answer !== answer) {
+    if (userAnswer !== answer) {
       // temporary
-      alert('wrong');
+      alert('Incorrect submission');
       return;
     }
+
+    try {
+      const response = await fetch(SERVER_URL + '/comp/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, userAnswer, day}),
+      });
+
+      console.log(response);
+      const result = await response.json();
+  
+      if (response.ok) {
+        console.log('Submission received');
+      } else {
+        alert(result.message);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }    
   }
 
   const reset = (event: React.SyntheticEvent) => {
